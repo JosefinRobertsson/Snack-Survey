@@ -5,9 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Radiobuttons.css 
+
+.radio-input {
+  position: absolute;
+  opacity: 0;
+}*/
+
+.radio-label {
+  cursor: pointer;
+  /* Add your desired styles for the label here */
 }
