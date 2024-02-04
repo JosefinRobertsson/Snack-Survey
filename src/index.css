@@ -27,3 +27,7 @@ code {
   cursor: pointer;
   /* Add your desired styles for the label here */
 }
+
+.hiddenBtn {
+  display: none;
+}

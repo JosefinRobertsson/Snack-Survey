@@ -8,13 +8,11 @@ const Radiobuttons = ({ label, id, children, handleKeyDown, ...delegated }) => {
                 type="radio"
                 id={id}
                 className="radio-input"
-                aria-label={children}
                 {...delegated}
             />
             <label
                 htmlFor={id}
                 tabIndex={0}
-                aria-label={children}
                 onKeyDown={handleKeyDown}
                 className="radio-label">
                 {children}
