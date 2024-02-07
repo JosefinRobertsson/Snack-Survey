@@ -43,7 +43,6 @@ const Type = ({ data }) => {
                     onChange={(event) => {
                         setType(event.target.value);
                         setShowProgressButton(true);
-                        console.log('type in onchange:', type);
                     }}
                     handleKeyDown={handleKeyDown(uniqueTypes[num])}>
                     {uniqueTypes[num]}

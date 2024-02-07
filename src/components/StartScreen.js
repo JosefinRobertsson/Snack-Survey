@@ -8,7 +8,7 @@ const StartScreen = () => {
     return (
         <div>
             <h1>Welcome to the Snack Survey</h1>
-            <ProgressButton hideButton={hideBackButton} />
+            <ProgressButton hideButton={hideBackButton} questionID="0" />
         </div>
     );
 }

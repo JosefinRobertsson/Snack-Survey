@@ -9,7 +9,6 @@ const Texture = ({ data }) => {
     const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
     const { type, taste, texture, setTexture } = React.useContext(TypeTasteTextureContext);
     const availableTextures = [...new Set(data.filter((snack) => snack.type === type && snack.taste === taste).map((snack) => snack.texture))];
-    console.log('availableTextures:', availableTextures);
 
     React.useEffect(() => {
         if (taste === '') {

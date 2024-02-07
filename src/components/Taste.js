@@ -40,7 +40,6 @@ const availableTastes = [...new Set(data.filter((snack) => snack.type === type).
                     onChange={(event) => {
                         setTaste(event.target.value);
                         setShowProgressButton(true);
-                        console.log('taste in onchange:', taste);
                     }}
                     handleKeyDown={handleKeyDown(availableTastes[num])}>
                     {availableTastes[num]}
