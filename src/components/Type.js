@@ -1,6 +1,6 @@
 import React from "react";
 import Radiobuttons from "./Radiobuttons";
-import { range } from "../utils";
+//import { range } from "../utils";
 import { ProgressContext } from './ProgressProvider';
 import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import ProgressButton from './ProgressButton';
@@ -8,14 +8,14 @@ import ProgressButton from './ProgressButton';
 const Type = ({ data }) => {
     const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
     const { type, setType } = React.useContext(TypeTasteTextureContext);
-
+    //use Set to store unique values
     const uniqueTypes = [...new Set(data.map((snack) => snack.type))];
 
     React.useEffect(() => {
         if (type === '') {
-        setShowProgressButton(false);
+            setShowProgressButton(false);
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     React.useEffect(() => {
@@ -30,26 +30,27 @@ const Type = ({ data }) => {
     };
     return (
         <>
-        <div className="typeGroup-container">
-            <h2>What type of snack do you think we need more of?</h2>
-            {range(uniqueTypes.length).map((num) => (
-                <Radiobuttons
-                    label={`${uniqueTypes[num]}`}
-                    name="TypeChoice"
-                    id={`${uniqueTypes[num]}`}
-                    key={`${uniqueTypes[num]}`}
-                    value={uniqueTypes[num]}
-                    checked={type === uniqueTypes[num]}
-                    onChange={(event) => {
-                        setType(event.target.value);
-                        setShowProgressButton(true);
-                    }}
-                    handleKeyDown={handleKeyDown(uniqueTypes[num])}>
-                    {uniqueTypes[num]}
-                </Radiobuttons>
-            ))}
-        </div>
-            {showProgressButton && <ProgressButton  currentAnswer={type} questionID="1"  />}
+            <div className="typeGroup-container">
+                <h2>What type of snack do you think we need more of?</h2>
+                {uniqueTypes.map((typeValue) => (
+                    <Radiobuttons
+                        label={`${typeValue}`}
+                        name="TypeChoice"
+                        id={`${typeValue}`}
+                        key={`${typeValue}`}
+                        value={typeValue}
+                        checked={type === typeValue}
+                        onChange={(event) => {
+                            setType(event.target.value);
+                            setShowProgressButton(true);
+                        }}
+                        handleKeyDown={handleKeyDown(typeValue)}>
+                        {typeValue}
+                    </Radiobuttons>
+                ))}
+
+            </div>
+            {showProgressButton && <ProgressButton currentAnswer={type} questionID="1" />}
         </>
     );
 }

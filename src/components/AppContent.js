@@ -3,6 +3,7 @@ import { snackbase } from '../snackbase';
 import StartScreen from './StartScreen';
 import Taste from './Taste';
 import Type from './Type';
+import Flavor from './Flavor';
 import { ProgressContext } from './ProgressProvider';
 import Texture from './Texture';
 
@@ -22,6 +23,9 @@ export const AppContent = () => {
         }
         {progress === 3 &&
         <Texture data={snackbase} />
+        }
+        {progress === 4 &&
+        <Flavor data={snackbase} />
         }
       </>
     );

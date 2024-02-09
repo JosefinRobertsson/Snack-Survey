@@ -1,5 +1,5 @@
 
-export const resetAnswers = (questionID, setType, setTaste, setTexture) => {
+export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavor) => {
     console.log('questionID:', questionID);
 
     switch (questionID) {
@@ -11,9 +11,14 @@ export const resetAnswers = (questionID, setType, setTaste, setTexture) => {
         case '1':
             setTaste('');
             setTexture('');
+            setFlavor([]);
             break;
         case '2':
             setTexture('');
+            setFlavor([]);
+            break;
+            case '3':
+            setFlavor([]);
             break;
         default:
             break;

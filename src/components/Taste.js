@@ -1,6 +1,6 @@
 import React from 'react';
 import Radiobuttons from './Radiobuttons';
-import { range } from '../utils';
+//import { range } from '../utils';
 import { ProgressContext } from './ProgressProvider';
 import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import ProgressButton from './ProgressButton';
@@ -9,6 +9,7 @@ const Taste = ({ data }) => {
 const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
 const {type, taste, setTaste} = React.useContext(TypeTasteTextureContext);
 const availableTastes = [...new Set(data.filter((snack) => snack.type === type).map((snack) => snack.taste))];
+console.log('availableTastes:', availableTastes);
    
     React.useEffect(() => {
         if (taste === '') {
@@ -29,21 +30,21 @@ const availableTastes = [...new Set(data.filter((snack) => snack.type === type).
         <>
         <div className="tasteGroup-container">
             <h2>Now, pick a taste</h2>    
-            {range(availableTastes.length).map((num) => (
-                <Radiobuttons
-                    label={`${availableTastes[num]}`}
-                    name="TasteChoice"
-                    id={`${availableTastes[num]}`}
-                    key={`${availableTastes[num]}`}
-                    value={availableTastes[num]}
-                    checked={taste === availableTastes[num]}
-                    onChange={(event) => {
-                        setTaste(event.target.value);
-                        setShowProgressButton(true);
-                    }}
-                    handleKeyDown={handleKeyDown(availableTastes[num])}>
-                    {availableTastes[num]}
-                </Radiobuttons>
+            {availableTastes.map((tasteValue) => (
+                    <Radiobuttons
+                        label={`${tasteValue}`}
+                        name="TasteChoice"
+                        id={`${tasteValue}`}
+                        key={`${tasteValue}`}
+                        value={tasteValue}
+                        checked={taste === tasteValue}
+                        onChange={(event) => {
+                            setTaste(event.target.value);
+                            setShowProgressButton(true);
+                        }}
+                        handleKeyDown={handleKeyDown(tasteValue)}>
+                        {tasteValue}
+                    </Radiobuttons>
             ))}
         </div>
         {showProgressButton && <ProgressButton currentAnswer={taste} questionID="2" />}

@@ -3,7 +3,10 @@ import React from "react";
 const Radiobuttons = ({ label, id, children, handleKeyDown, ...delegated }) => {
 
     return (
-        <form>
+        <form
+        onSubmit={(event) => {
+            event.preventDefault();
+          }}>
             <input
                 type="radio"
                 id={id}
