@@ -6,8 +6,10 @@ import Type from './Type';
 import Flavor from './Flavor';
 import { ProgressContext } from './ProgressProvider';
 import Texture from './Texture';
+import Slider from './Slider';
+import ImportantChoice from './ImportantChoice';
 
-// start, type, taste, texture, flavor (checkbox), price (slider), textinput, options, results
+// 0 start, 1 type, 2 taste, 3 texture, 4 flavor (checkbox), 5 price (slider), 6 options, 7 textinput, results
 
 export const AppContent = () => {
     const { progress } = React.useContext(ProgressContext);
@@ -27,6 +29,10 @@ export const AppContent = () => {
         {progress === 4 &&
         <Flavor data={snackbase} />
         }
+        {progress === 5 &&
+        <Slider />}
+        {progress === 6 &&
+        <ImportantChoice />}
       </>
     );
   };

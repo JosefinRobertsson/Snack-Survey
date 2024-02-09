@@ -11,14 +11,14 @@ export const snackbase = [
       taste: 'sour',
       type: 'fruit',
       texture: 'soft',
-      flavor: 'fruit'
+      flavor: 'raisin'
     },
     {
       name: 'Macadamianuts',
       taste: 'savory',
       type: 'nuts',
       texture: 'crunchy',
-      flavor: 'nut'
+      flavor: 'macadamia'
     },
     {
       name: 'Salmiakki',
@@ -32,14 +32,14 @@ export const snackbase = [
       taste: 'sweet',
       type: 'candy',
       texture: 'chewy',
-      flavor: 'fruit'
+      flavor: ['apple', 'cherry', 'lemon', 'orange']
     },
     {
       name: 'Cherry balls',
       taste: 'sour',
       type: 'candy',
       texture: 'chewy',
-      flavor: 'fruit'
+      flavor: 'cherry'
     },
     {
       name: 'Licorice eggs',
@@ -49,39 +49,46 @@ export const snackbase = [
       flavor: 'licorice'
     },
     {
-      name: 'Licorice Drops',
+      name: 'yoghurt covered licorice',
+      taste: 'sweet',
+      type: 'candy',
+      texture: 'soft',
+      flavor: ['licorice', 'vanilla', 'lemon', 'melon']
+    },
+    {
+      name: 'Licorice Dips',
       taste: 'sour',
       type: 'candy',
       texture: 'chewy',
-      flavor: ['licorice', 'fruit']
+      flavor: ['licorice', 'apple']
     },
     {
       name: 'Banana chips',
       taste: 'sweet',
       type: 'fruit',
       texture: 'crunchy',
-      flavor: 'fruit'
+      flavor: ['banana', 'chocolate']
     },
     {
       name: 'Caramilized almonds',
       taste: 'sweet',
       type: 'nuts',
       texture: 'crunchy',
-      flavor: 'caramel'
+      flavor: ['caramel', 'almond']
     },
     {
       name: 'Sour patch kids',
       taste: 'sour',
       type: 'candy',
       texture: 'chewy',
-      flavor: 'fruit'
+      flavor: ['apple', 'cherry', 'lemon', 'orange']
     },
     {
       name: 'Japanese mix',
       taste: 'sour',
       type: 'chips',
       texture: 'crunchy',
-      flavor: 'spicy'
+      flavor: ['spicy', 'garlic', 'butter']
     },
     {
       name: 'Butter popcorn',
@@ -91,11 +98,11 @@ export const snackbase = [
       flavor: 'butter'
     },
     {
-      name: 'Butter sticks',
+      name: 'Crunchilados',
       taste: 'savory',
       type: 'chips',
       texture: 'crunchy',
-      flavor: 'butter'
+      flavor: ['butter', 'spicy', 'garlic']
     },
     {
       name: 'Wasabi nuts',
@@ -123,14 +130,14 @@ export const snackbase = [
       taste: 'savory',
       type: 'chips',
       texture: 'crispy',
-      flavor: ['butter', 'spicy']
+      flavor: ['butter', 'spicy', 'garlic']
     },
     {
       name: 'Butter drops',
       taste: 'sweet',
       type: 'candy',
       texture: 'soft',
-      flavor: 'butter'
+      flavor: ['butter', 'caramel', 'vanilla']
     },
     {
       name: 'Salmiakki animals',
@@ -144,35 +151,35 @@ export const snackbase = [
       taste: 'sweet',
       type: 'fruit',
       texture: 'soft',
-      flavor: ['liquor', 'chocolate']
+      flavor: ['liquor', 'chocolate', 'raisin']
     },
     {
       name: 'Snack olives',
       taste: 'savory',
       type: 'fruit',
       texture: 'soft',
-      flavor: ['spicy', 'plain']
+      flavor: ['spicy', 'garlic']
     },
     {
       name: 'Dried mango',
       taste: 'sweet',
       type: 'fruit',
       texture: 'chewy',
-      flavor: 'fruit'
+      flavor: 'mango'
     },
     {
       name: 'Sour apple rings',
       taste: 'sour',
       type: 'fruit',
       texture: 'chewy',
-      flavor: 'fruit'
+      flavor: 'apple'
     },
     {
-      name: 'Lightly salted chips',
+      name: 'Salters',
       taste: 'salty',
       type: 'chips',
       texture: 'crispy',
-      flavor: 'plain'
+      flavor: 'spicy'
     },
     {
       name: 'Butter bbq chips',
@@ -186,21 +193,21 @@ export const snackbase = [
       taste: 'savory',
       type: 'chips',
       texture: 'chewy',
-      flavor: 'plain'
+      flavor: 'butter'
     },
     {
       name: 'Bobo macadamia bar',
       taste: 'sweet',
       type: 'nuts',
       texture: 'crunchy',
-      flavor: ['nut', 'chocolate', 'caramel']
+      flavor: ['macadamia', 'chocolate', 'caramel']
     },
     {
       name: 'Melon bites',
       taste: 'salty',
       type: 'candy',
       texture: 'soft',
-      flavor: ['fruit', 'licorice']
+      flavor: ['melon', 'licorice']
     },
     {
       name: 'Sour takis',
@@ -217,11 +224,11 @@ export const snackbase = [
       flavor: ['spicy', 'butter']
     },
     {
-      name: 'Liquor bites',
+      name: 'Liquor pralines',
       taste: 'sweet',
       type: 'candy',
       texture: 'soft',
-      flavor: ['liquor', 'chocolate']
+      flavor: ['liquor', 'chocolate', 'vanilla']
     },
     {
       name: 'Golden Fudge Bar',
@@ -242,21 +249,21 @@ export const snackbase = [
       taste: 'sweet',
       type: 'fruit',
       texture: 'soft',
-      flavor: ['liquor', 'chocolate']
+      flavor: ['liquor', 'chocolate', 'mango']
     },
     {
       name: 'Cherry slices',
       taste: 'sweet',
       type: 'candy',
       texture: 'soft',
-      flavor: 'fruit'
+      flavor: 'cherry'
     },
     {
       name: 'Tiki Tacos',
       taste: 'savory',
       type: 'chips',
       texture: 'crispy',
-      flavor: 'spicy'
+      flavor: ['spicy', 'butter', 'garlic']
     },
     {
       name: 'Salt & Vinegar chips',
@@ -270,28 +277,28 @@ export const snackbase = [
       taste: 'sweet',
       type: 'candy',
       texture: 'crunchy',
-      flavor: ['chocolate', 'caramel', 'nuts', 'fruit']
+      flavor: ['chocolate', 'caramel', 'peanut', 'vanilla', 'cherry', 'raisin']
     },
     {
-      name: 'Kiwi sticks',
+      name: 'Fruit sticks',
       taste: 'sweet',
       type: 'fruit',
-      texture: 'soft',
-      flavor: 'fruit'
+      texture: 'chewy',
+      flavor: ['mango', 'orange', 'apple', 'vanilla']
     },
     {
-      name: 'Sour peach slices',
+      name: 'Fizzies',
       taste: 'sour',
       type: 'fruit',
       texture: 'soft',
-      flavor: 'fruit'
+      flavor: ['lemon', 'orange', 'apple', 'cherry', 'melon']
     },
     {
       name: 'Snackeletties',
       taste: 'salty',
       type: 'candy',
       texture: 'crunchy',
-      flavor: ['licorice', 'caramel']
+      flavor: ['licorice', 'caramel', 'vanilla']
     },
     {
       name: 'YumPunch',
@@ -305,34 +312,77 @@ export const snackbase = [
       taste: 'sweet',
       type: 'fruit',
       texture: 'crunchy',
-      flavor: ['liquor', 'fruit', 'caramel']
+      flavor: ['liquor', 'banana', 'caramel']
     },
     {
       name: 'Roast flake mix',
       taste: 'savory',
       type: 'chips',
       texture: 'crispy',
-      flavor: ['spicy', 'nut', 'plain', 'butter']
+      flavor: ['spicy', 'garlic', 'butter']
     },
     {
       name: 'Marziballs',
       taste: 'sweet',
       type: 'candy',
       texture: 'soft',
-      flavor: ['liquor', 'plain', 'chocolate']
+      flavor: ['liquor', 'vanilla', 'chocolate']
     },
     {
       name: 'Crisp-o-bars',
       taste: 'sweet',
       type: 'candy',
       texture: 'crispy',
-      flavor: ['nut', 'fruit', 'chocolate']
+      flavor: ['almond', 'chocolate']
     },
     {
       name: 'NutPots',
       taste: 'savory',
       type: 'nuts',
       texture: 'crunchy',
-      flavor: ['nut', 'plain']
+      flavor: ['almond', 'peanut', 'macadamia']
+    },
+    {
+      name: 'Stings',
+      taste: 'sour',
+      type: 'fruit',
+      texture: 'chewy',
+      flavor: ['spicy', 'apple', 'mango']
+    },
+    {
+      name: 'Peanutbutter cups',
+      taste: 'sweet',
+      type: 'candy',
+      texture: 'soft',
+      flavor: ['peanut', 'chocolate', 'caramel']
+    },
+    {
+      name: 'RiceBites',
+      taste: 'sweet',
+      type: 'candy',
+      texture: 'crispy',
+      flavor: ['chocolate', 'caramel', 'vanilla']
+    },
+    {
+      name: 'Jinglys zinglys',
+      taste: 'sour',
+      type: 'candy',
+      texture: 'soft',
+      flavor: ['mango', 'lemon', 'orange']
+    },
+    {
+      name: 'Jaroba',
+      taste: 'sour',
+      type: 'candy',
+      texture: 'soft',
+      flavor: ['apple', 'lemon']
+    },
+    {
+      name: 'Xtreemz',
+      taste: 'salty',
+      type: 'nuts',
+      texture: 'crunchy',
+      flavor: ['almond', 'peanut', 'garlic']
     }
+
   ]

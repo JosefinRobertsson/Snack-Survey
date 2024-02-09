@@ -1,13 +1,15 @@
 import React from 'react';
 import { ProgressContext } from './ProgressProvider';
 import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
-import { FlavorContext } from './FlavorProvider'; 
+import { CheckboxChoiceContext } from './CheckboxChoiceProvider'; 
+import { PriceContext } from './PriceProvider';
 import { resetAnswers } from '../helpers/reset-state.helpers';
 
 const ProgressButton = ({ hideButton, currentAnswer, questionID }) => {
     const { progress, setProgress } = React.useContext(ProgressContext);
     const { setType, setTaste, setTexture } = React.useContext(TypeTasteTextureContext);
-    const { setFlavor } = React.useContext(FlavorContext);
+    const { setFlavor, setImportantCategories } = React.useContext(CheckboxChoiceContext);
+    const { setPrice } = React.useContext(PriceContext);
     const backBtnClass = hideButton ? 'hiddenBtn' : '';
     const prevAnswerRef = React.useRef();
 
@@ -22,7 +24,7 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID }) => {
     const handleProgressClick = (id) => {
         if (id === "nextBtn") {
             if ((typeof prevAnswerRef.current != "undefined" && prevAnswerRef.current !== currentAnswer) || (questionID === "0")) {
-                resetAnswers(questionID, setType, setTaste, setTexture, setFlavor);
+                resetAnswers(questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories);
                 console.log('User changed their answer!');
             }
             setProgress(progress + 1);

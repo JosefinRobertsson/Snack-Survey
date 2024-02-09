@@ -2,7 +2,8 @@ import React from 'react';
 import ProgressProvider from './components/ProgressProvider';
 import AppContent from './components/AppContent';
 import TypeTasteTextureProvider from './components/TypeTasteTextureProvider';
-import FlavorProvider from './components/FlavorProvider';
+import CheckboxChoiceProvider from './components/CheckboxChoiceProvider';
+import PriceProvider from './components/PriceProvider';
 
 
 
@@ -10,9 +11,11 @@ export const App = () => {
   return (
     <ProgressProvider>
       <TypeTasteTextureProvider>
-        <FlavorProvider>
-      <AppContent />
-        </FlavorProvider>
+        <CheckboxChoiceProvider>
+          <PriceProvider>
+            <AppContent />
+          </PriceProvider>
+        </CheckboxChoiceProvider>
       </TypeTasteTextureProvider>
     </ProgressProvider>
   );
