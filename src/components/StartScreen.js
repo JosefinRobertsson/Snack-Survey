@@ -3,12 +3,11 @@ import ProgressButton from './ProgressButton';
 
 
 const StartScreen = () => {
-    const hideBackButton = true;
 
     return (
         <div>
             <h1>Welcome to the Snack Survey</h1>
-            <ProgressButton hideButton={hideBackButton} questionID="0" />
+            <ProgressButton hideButton={true} questionID="0" />
         </div>
     );
 }
