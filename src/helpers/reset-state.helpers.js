@@ -1,5 +1,5 @@
 
-export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories) => {
+export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories, setSuggestion) => {
 
     switch (questionID) {
         case '0':
@@ -36,7 +36,7 @@ export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavo
             setImportantCategories([]);
             break;
         case '6':
-
+        setSuggestion('');
             break;
         default:
             break;

@@ -5,7 +5,7 @@ import { CheckboxChoiceContext } from './CheckboxChoiceProvider';
 import { PriceContext } from './PriceProvider';
 import { resetAnswers } from '../helpers/reset-state.helpers';
 
-const ProgressButton = ({ hideButton, currentAnswer, questionID }) => {
+const ProgressButton = ({ hideButton, currentAnswer, questionID, setSuggestion, progressButtonName }) => {
     const { progress, setProgress } = React.useContext(ProgressContext);
     const { setType, setTaste, setTexture } = React.useContext(TypeTasteTextureContext);
     const { setFlavor, setImportantCategories } = React.useContext(CheckboxChoiceContext);
@@ -24,7 +24,7 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID }) => {
     const handleProgressClick = (id) => {
         if (id === "nextBtn") {
             if ((typeof prevAnswerRef.current != "undefined" && prevAnswerRef.current !== currentAnswer) || (questionID === "0")) {
-                resetAnswers(questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories);
+                resetAnswers(questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories, setSuggestion);
                 console.log('User changed their answer!');
             }
             setProgress(progress + 1);
@@ -36,7 +36,7 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID }) => {
     return (
         <>
             <button id="backBtn" className={backBtnClass} onClick={() => handleProgressClick("backBtn")}>Back</button>
-            <button id="nextBtn" onClick={() => handleProgressClick("nextBtn")}>Next</button>
+            <button id="nextBtn" onClick={() => handleProgressClick("nextBtn")}>{progressButtonName ? progressButtonName : 'Next'}</button>
         </>
     );
 }

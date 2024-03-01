@@ -8,6 +8,7 @@ import { ProgressContext } from './ProgressProvider';
 import Texture from './Texture';
 import Slider from './Slider';
 import ImportantChoice from './ImportantChoice';
+import AddSuggestion from './AddSuggestion';
 
 // 0 start, 1 type, 2 taste, 3 texture, 4 flavor (checkbox), 5 price (slider), 6 options, 7 textinput, results
 
@@ -16,7 +17,8 @@ export const AppContent = () => {
   
     return (
       <>
-        {progress === 0 && <StartScreen />}
+        {progress === 0 && 
+        <StartScreen />}
         {progress === 1 &&
           <Type data={snackbase} />
         }
@@ -33,6 +35,8 @@ export const AppContent = () => {
         <Slider />}
         {progress === 6 &&
         <ImportantChoice />}
+        {progress === 7 &&
+        <AddSuggestion />}
       </>
     );
   };

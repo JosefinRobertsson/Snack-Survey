@@ -28,7 +28,7 @@ const ImportantChoice = () => {
                 {categoryValue}
             </Checkboxes>
         ))}
-        <ProgressButton currentAnswer={importantCategories} questionID='6' />
+        <ProgressButton currentAnswer={importantCategories} questionID="6" />
         </>
     );
 }
