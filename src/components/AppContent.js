@@ -9,8 +9,9 @@ import Texture from './Texture';
 import Slider from './Slider';
 import ImportantChoice from './ImportantChoice';
 import AddSuggestion from './AddSuggestion';
+import SummaryScreen from './SummaryScreen';
 
-// 0 start, 1 type, 2 taste, 3 texture, 4 flavor (checkbox), 5 price (slider), 6 options, 7 textinput, results
+// 0 start, 1 type, 2 taste, 3 texture, 4 flavor (checkbox), 5 price (slider), 6 options, 7 textinput, summary
 
 export const AppContent = () => {
     const { progress } = React.useContext(ProgressContext);
@@ -37,6 +38,8 @@ export const AppContent = () => {
         <ImportantChoice />}
         {progress === 7 &&
         <AddSuggestion />}
+        {progress === 8 &&
+        <SummaryScreen />}
       </>
     );
   };

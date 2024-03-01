@@ -3,13 +3,15 @@ import { ProgressContext } from './ProgressProvider';
 import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import { CheckboxChoiceContext } from './CheckboxChoiceProvider'; 
 import { PriceContext } from './PriceProvider';
+import { SnackSuggestionContext } from './SnackSuggestionProvider';
 import { resetAnswers } from '../helpers/reset-state.helpers';
 
-const ProgressButton = ({ hideButton, currentAnswer, questionID, setSuggestion, progressButtonName }) => {
+const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonName }) => {
     const { progress, setProgress } = React.useContext(ProgressContext);
     const { setType, setTaste, setTexture } = React.useContext(TypeTasteTextureContext);
     const { setFlavor, setImportantCategories } = React.useContext(CheckboxChoiceContext);
     const { setPrice } = React.useContext(PriceContext);
+    const { setSuggestion } = React.useContext(SnackSuggestionContext);
     const backBtnClass = hideButton ? 'hiddenBtn' : '';
     const prevAnswerRef = React.useRef();
 

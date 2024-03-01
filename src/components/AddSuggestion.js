@@ -1,41 +1,44 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import { ProgressContext } from './ProgressProvider';
 import ProgressButton from './ProgressButton';
+import { SnackSuggestionContext } from './SnackSuggestionProvider';
 
 
 const AddSuggestion = () => {
     const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
-    const [suggestion, setSuggestion] = React.useState('');
-    const [dropdown, setDropdown] = React.useState('empty');
+   const {suggestion, setSuggestion, dropdown, setDropdown} = React.useContext(SnackSuggestionContext);
     const [progressButtonName, setProgressButtonName] = React.useState('Next');
     const [isVisible, setIsVisible] = React.useState(false);
 
-    // Show the progress-button after the user has chosen 'no' or after the user has chosen 'yes' and entered at least 4 characters in the input field
     React.useEffect(() => {
-        if (dropdown === 'empty' || (dropdown === 'yes' && (suggestion.length < 4))) {
+        // Show/Hide the input field
+        if (dropdown === 'yes') {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    
+        // Show/Hide the progress button
+        if (dropdown === 'empty' || (dropdown === 'yes' && suggestion.length < 4)) {
             setShowProgressButton(false);
         } else {
             setShowProgressButton(true);
         }
-    }, [dropdown, suggestion]);
-
-    // Decide the text on the progress-button depending on wether the user wants to add a suggestion or not
-    React.useEffect(() => {
-        if (dropdown === 'yes' && (suggestion.length >= 4)) {
+    
+        // Update progress button text
+        if (dropdown === 'yes' && suggestion.length >= 4) {
             setProgressButtonName('Submit');
         } else if (dropdown === 'no') {
             setProgressButtonName('Next');
         }
     }, [dropdown, suggestion]);
 
-    // Show the input field if the user wants to add a suggestion
-    React.useEffect(() => {
-        if (dropdown === 'yes') {
-            setIsVisible(true);
-        } else {
-            setIsVisible(false);
-        }
-    }, [dropdown]);
+    //prevent React from re-rendering the component on every keystroke by using useCallback
+    const handleSuggestionChange = React.useCallback((event) => {
+        setSuggestion(event.target.value);
+    }, []);
+    
 
     return (
         <>
@@ -49,7 +52,7 @@ const AddSuggestion = () => {
                         onChange={event => {
                             setDropdown(event.target.value);
                         }}>
-                        <option value="empty"></option>
+                        <option value="empty" disabled></option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
@@ -57,16 +60,14 @@ const AddSuggestion = () => {
                         <div>
                             <label htmlFor="suggestion">Suggestion:</label>
                             <input type="text" id="suggestion" name="suggestion" value={suggestion} min="4" max="40"
-                                onChange={event => {
-                                    setSuggestion(event.target.value)
-                                }}
+                               onChange={handleSuggestionChange}
                             />
                         </div>
                     }
                 </form>
             </div>
             {showProgressButton &&
-                <ProgressButton currentAnswer={suggestion} questionID="7" setSuggestion={setSuggestion}
+                <ProgressButton currentAnswer={suggestion} questionID="7" 
                     progressButtonName={progressButtonName} />
             }
         </>
