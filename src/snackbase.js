@@ -32,7 +32,7 @@ export const snackbase = [
       taste: 'sweet',
       type: 'candy',
       texture: 'chewy',
-      flavor: ['apple', 'cherry', 'lemon', 'orange']
+      flavor: ['apple', 'cherry', 'lime', 'orange']
     },
     {
       name: 'Cherry balls',
@@ -53,7 +53,7 @@ export const snackbase = [
       taste: 'sweet',
       type: 'candy',
       texture: 'soft',
-      flavor: ['licorice', 'vanilla', 'lemon', 'melon']
+      flavor: ['licorice', 'vanilla', 'lime', 'melon']
     },
     {
       name: 'Licorice Dips',
@@ -81,7 +81,7 @@ export const snackbase = [
       taste: 'sour',
       type: 'candy',
       texture: 'chewy',
-      flavor: ['apple', 'cherry', 'lemon', 'orange']
+      flavor: ['apple', 'cherry', 'lime', 'orange']
     },
     {
       name: 'Japanese mix',
@@ -210,8 +210,15 @@ export const snackbase = [
       flavor: ['melon', 'licorice']
     },
     {
-      name: 'Sour takis',
+      name: 'Takis nitro',
       taste: 'sour',
+      type: 'chips',
+      texture: 'crispy',
+      flavor: ['spicy', 'lime']
+    },
+    {
+      name: 'Takis Crunchy Fajitas',
+      taste: 'savory',
       type: 'chips',
       texture: 'crispy',
       flavor: 'spicy'
@@ -291,7 +298,7 @@ export const snackbase = [
       taste: 'sour',
       type: 'fruit',
       texture: 'soft',
-      flavor: ['lemon', 'orange', 'apple', 'cherry', 'melon']
+      flavor: ['lime', 'orange', 'apple', 'cherry', 'melon']
     },
     {
       name: 'Snackeletties',
@@ -368,14 +375,14 @@ export const snackbase = [
       taste: 'sour',
       type: 'candy',
       texture: 'soft',
-      flavor: ['mango', 'lemon', 'orange']
+      flavor: ['mango', 'lime', 'orange']
     },
     {
       name: 'Jaroba',
       taste: 'sour',
       type: 'candy',
       texture: 'soft',
-      flavor: ['apple', 'lemon']
+      flavor: ['apple', 'lime']
     },
     {
       name: 'Xtreemz',
