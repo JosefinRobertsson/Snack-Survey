@@ -11,7 +11,7 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonN
     const { setType, setTaste, setTexture } = React.useContext(TypeTasteTextureContext);
     const { setFlavor, setImportantCategories } = React.useContext(CheckboxChoiceContext);
     const { setPrice } = React.useContext(PriceContext);
-    const { setSuggestion } = React.useContext(SnackSuggestionContext);
+    const { setSuggestion, setDropdown } = React.useContext(SnackSuggestionContext);
     const backBtnClass = hideButton ? 'hiddenBtn' : '';
     const prevAnswerRef = React.useRef();
 
@@ -26,7 +26,7 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonN
     const handleProgressClick = (id) => {
         if (id === "nextBtn") {
             if ((typeof prevAnswerRef.current != "undefined" && prevAnswerRef.current !== currentAnswer) || (questionID === "0")) {
-                resetAnswers(questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories, setSuggestion);
+                resetAnswers(questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories, setSuggestion, setDropdown);
                 console.log('User changed their answer!');
             }
             setProgress(progress + 1);
