@@ -20,11 +20,11 @@ const Flavor = ({ data }) => {
 
     React.useEffect(() => {
         if (flavor.length === 0) {
-          setShowProgressButton(false);
+            setShowProgressButton(false);
         } else {
-          setShowProgressButton(true);
+            setShowProgressButton(true);
         }
-      }, [flavor, setShowProgressButton]);
+    }, [flavor, setShowProgressButton]);
 
 
     const { handleCheckboxChange, handleCheckboxKeyDown } = useCheckboxChange('4');
@@ -45,8 +45,10 @@ const Flavor = ({ data }) => {
                         onChange={(event) => {
                             handleCheckboxChange(flavorValue, event.target.checked);
                         }}
-                        onKeyDown={handleCheckboxKeyDown(flavorValue, flavor.includes(flavorValue))}
+                        onKeyDown={(event) => {
+                            handleCheckboxKeyDown(flavorValue, flavor.includes(flavorValue), event);
 
+                        }}
                     >
                         {flavorValue}
                     </Checkboxes>

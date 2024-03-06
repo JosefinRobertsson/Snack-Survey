@@ -23,7 +23,9 @@ const ImportantChoice = () => {
                 onChange={(event) => {
                     handleCheckboxChange(categoryValue, event.target.checked);
                 }}
-                onKeyDown={handleCheckboxKeyDown(categoryValue)}
+                onKeyDown={(event) => {
+                    handleCheckboxKeyDown(categoryValue, importantCategories.includes(categoryValue), event);
+                }}
             >
                 {categoryValue}
             </Checkboxes>

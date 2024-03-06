@@ -52,7 +52,7 @@ const AddSuggestion = () => {
                         onChange={event => {
                             setDropdown(event.target.value);
                         }}>
-                        <option value="empty" disabled></option>
+                        <option value="empty" disabled selected></option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>

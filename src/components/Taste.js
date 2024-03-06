@@ -1,6 +1,5 @@
 import React from 'react';
 import Radiobuttons from './Radiobuttons';
-//import { range } from '../utils';
 import { ProgressContext } from './ProgressProvider';
 import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import ProgressButton from './ProgressButton';
