@@ -6,7 +6,6 @@ import { ProgressContext } from './ProgressProvider';
 import { CheckboxChoiceContext } from './CheckboxChoiceProvider';
 import useCheckboxChange from '../hooks/useCheckboxChange.hook';
 
-
 const Flavor = ({ data }) => {
     const { flavor } = React.useContext(CheckboxChoiceContext);
     const { type, taste, texture } = React.useContext(TypeTasteTextureContext);

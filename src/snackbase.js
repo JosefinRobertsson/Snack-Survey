@@ -14,7 +14,7 @@ export const snackbase = [
       flavor: 'raisin'
     },
     {
-      name: 'Macadamianuts',
+      name: 'Macadamia nuts',
       taste: 'savory',
       type: 'nuts',
       texture: 'crunchy',
