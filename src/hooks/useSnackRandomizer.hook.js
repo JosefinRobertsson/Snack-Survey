@@ -17,6 +17,7 @@ const useSnackRandomizer = () => {
         });
         setSnackList(matchingSnacks);
     }, [type, taste, texture, flavor]);
+    console.log('snackList:', snackList);
 
     const randomizedSnack = () => {
         if (snackList.length === 0) {

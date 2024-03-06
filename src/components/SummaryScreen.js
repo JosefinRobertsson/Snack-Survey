@@ -4,6 +4,7 @@ import { CheckboxChoiceContext } from './CheckboxChoiceProvider';
 import { PriceContext } from './PriceProvider';
 import { SnackSuggestionContext } from './SnackSuggestionProvider';
 import useSnackRandomizer from '../hooks/useSnackRandomizer.hook';
+import EndButton from './EndButton';
 
 const SummaryScreen = () => {
     const { type, taste, texture } = React.useContext(TypeTasteTextureContext);
@@ -11,16 +12,16 @@ const SummaryScreen = () => {
     const { price } = React.useContext(PriceContext);
     const { suggestion } = React.useContext(SnackSuggestionContext);
 
-    // call the useSnackRandomizer hook
+    // call the useSnackRandomizer hook to get a random snack
     const randomizedSnack = useSnackRandomizer();
 
     // separate the categories with a comma
     const categoryList = importantCategories.length > 0 ? importantCategories.join(', ') : '';
 
-    // display the flavors in a readable format depending on the number of flavors selected
+    // separate the flavors to display in a readable format
     const flavorDisplay = () => {
         if (flavor.length === 1) {
-            return ` Your flavor of choice was ${flavor[0]}`;
+            return ` Your flavor of choice is ${flavor[0]}`;
         } else if (flavor.length === 2) {
             return `${flavor[0]} and ${flavor[1]}`;
         } else if (flavor.length > 2) {
@@ -40,6 +41,8 @@ const SummaryScreen = () => {
             {suggestion && <p>You specifically suggested: {suggestion}</p>}
             {flavor.length === 1 && <p>{flavorDisplay()}</p>}
             {flavor.length > 1 && <p>Your flavors of choice are {flavorDisplay()}</p>}
+            <p>Does this sound about right? If so please submit your answers!</p>
+            <EndButton questionID='8' />
         </>
     );
 }
