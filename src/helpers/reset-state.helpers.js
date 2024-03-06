@@ -1,5 +1,5 @@
 
-export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories, setSuggestion) => {
+export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories, setSuggestion, setDropdown) => {
 
     switch (questionID) {
         case '0':
@@ -9,6 +9,8 @@ export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavo
             setFlavor([]);
             setPrice(7);
             setImportantCategories([]);
+            setSuggestion('');
+            setDropdown('empty');
             break;
         case '1':
             setTaste('');
@@ -16,27 +18,48 @@ export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavo
             setFlavor([]);
             setPrice(7);
             setImportantCategories([]);
+            setSuggestion('');
+            setDropdown('empty');
             break;
         case '2':
             setTexture('');
             setFlavor([]);
             setPrice(7);
             setImportantCategories([]);
+            setSuggestion('');
+            setDropdown('empty');
             break;
         case '3':
             setFlavor([]);
             setPrice(7);
             setImportantCategories([]);
+            setSuggestion('');
+            setDropdown('empty');
             break;
         case '4':
             setPrice(7);
             setImportantCategories([]);
+            setSuggestion('');
+            setDropdown('empty');
             break;
         case '5':
             setImportantCategories([]);
+            setSuggestion('');
+            setDropdown('empty');
             break;
         case '6':
         setSuggestion('');
+        setDropdown('empty');
+            break;
+        case '8':
+            setType('')
+            setTaste('');
+            setTexture('');
+            setFlavor([]);
+            setPrice(7);
+            setImportantCategories([]);
+            setSuggestion('');
+            setDropdown('empty');
             break;
         default:
             break;
@@ -44,3 +67,4 @@ export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavo
 
     return;
 }
+
