@@ -30,7 +30,7 @@ const handleBackClick = () => {
             suggestion: suggestion
         }
         setFormData(newFormData);
-        console.log('formData:', formData);
+        console.log('formData:', newFormData);
     }       
 
     return (
