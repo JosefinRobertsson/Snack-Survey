@@ -16,17 +16,16 @@ code {
     monospace;
 }
 
-/* Radiobuttons and checkboxes */
+ 
 
 .radio-input,
 .checkbox-input {
   position: absolute;
   opacity: 0;
 }
-
+/* Radiobuttons and checkboxes
 .radio-label,
-.checkbox-label,
-.slider {
+.checkbox-label {
   cursor: pointer;
 }
 
@@ -34,7 +33,6 @@ code {
 .radio-label:hover,
 .checkbox-label:focus,
 .checkbox-label:hover {
-  /* Add focus styles as needed */
   color: lawngreen;
   outline: 1px solid lawngreen;
 }
@@ -43,6 +41,7 @@ code {
 .checkbox-input:checked + .checkbox-label {
   color: lawngreen;
 }
+*/
 
 .hiddenBtn {
   display: none;

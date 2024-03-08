@@ -1,4 +1,5 @@
 import React from "react";
+import { CheckedLabel } from "../styles/radio-check.styles";
 
 const Radiobuttons = ({ label, id, children, handleKeyDown, ...delegated }) => {
 
@@ -14,13 +15,14 @@ const Radiobuttons = ({ label, id, children, handleKeyDown, ...delegated }) => {
                 className="radio-input"
                 {...delegated}
             />
-            <label
+            <CheckedLabel
                 htmlFor={id}
+                checked={delegated.checked}
                 tabIndex={0}
                 onKeyDown={handleKeyDown}
                 className="radio-label">
                 {children}
-            </label>
+            </CheckedLabel>
         </form>
     );
 }
