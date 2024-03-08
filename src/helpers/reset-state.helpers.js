@@ -7,7 +7,7 @@ export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavo
             setTaste('');
             setTexture('');
             setFlavor([]);
-            setPrice(7);
+            setPrice(10);
             setImportantCategories([]);
             setSuggestion('');
             setDropdown('empty');
@@ -16,7 +16,7 @@ export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavo
             setTaste('');
             setTexture('');
             setFlavor([]);
-            setPrice(7);
+            setPrice(10);
             setImportantCategories([]);
             setSuggestion('');
             setDropdown('empty');
@@ -24,20 +24,20 @@ export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavo
         case '2':
             setTexture('');
             setFlavor([]);
-            setPrice(7);
+            setPrice(10);
             setImportantCategories([]);
             setSuggestion('');
             setDropdown('empty');
             break;
         case '3':
             setFlavor([]);
-            setPrice(7);
+            setPrice(10);
             setImportantCategories([]);
             setSuggestion('');
             setDropdown('empty');
             break;
         case '4':
-            setPrice(7);
+            setPrice(10);
             setImportantCategories([]);
             setSuggestion('');
             setDropdown('empty');
@@ -56,7 +56,7 @@ export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavo
             setTaste('');
             setTexture('');
             setFlavor([]);
-            setPrice(7);
+            setPrice(10);
             setImportantCategories([]);
             setSuggestion('');
             setDropdown('empty');

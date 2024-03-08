@@ -12,6 +12,7 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonN
     const { setFlavor, setImportantCategories } = React.useContext(CheckboxChoiceContext);
     const { setPrice } = React.useContext(PriceContext);
     const { setSuggestion, setDropdown } = React.useContext(SnackSuggestionContext);
+    //hide the back button on the start screen
     const backBtnClass = hideButton ? 'hiddenBtn' : '';
     const prevAnswerRef = React.useRef();
 

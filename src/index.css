@@ -16,16 +16,32 @@ code {
     monospace;
 }
 
-/* Radiobuttons.css 
+/* Radiobuttons.css */
 
-.radio-input {
+.radio-input,
+.checkbox-input {
   position: absolute;
   opacity: 0;
-}*/
+}
 
-.radio-label {
+.radio-label,
+.checkbox-label,
+.slider {
   cursor: pointer;
-  /* Add your desired styles for the label here */
+}
+
+.radio-label:focus, 
+.radio-label:hover,
+.checkbox-label:focus,
+.checkbox-label:hover {
+  /* Add focus styles as needed */
+  color: lawngreen;
+  outline: 1px solid lawngreen;
+}
+
+.radio-input:checked + .radio-label,
+.checkbox-input:checked + .checkbox-label {
+  color: lawngreen;
 }
 
 .hiddenBtn {

@@ -18,7 +18,7 @@ const Slider = () => {
                     
                 </label>
                 <input
-                    type="range" min={1} max={20} value={price} id="price-slider"
+                    type="range" min={1} max={20} value={price} id="price-slider" className="slider"
                     onChange={event => {
                         setPrice(event.target.value);
                     }}

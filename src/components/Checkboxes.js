@@ -6,6 +6,7 @@ const Checkboxes = ({ label, id, children, onKeyDown, ...delegated }) => {
             <form>
                 <input
                     type="checkbox"
+                    tabindex={-1}
                     id={id}
                     {...delegated}
                     onKeyDown={onKeyDown}

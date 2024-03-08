@@ -20,7 +20,7 @@ const handleBackClick = () => {
     }
 
     const handleSubmit = () => {
-        setFormData({
+        const newFormData = {
             type: type,
             taste: taste,
             texture: texture,
@@ -28,11 +28,10 @@ const handleBackClick = () => {
             price: `€${price}`,
             importantCategories: importantCategories,
             suggestion: suggestion
-        })
-    }
-    React.useEffect(() => {
+        }
+        setFormData(newFormData);
         console.log('formData:', formData);
-      }, [formData]);
+    }       
 
     return (
         <>
