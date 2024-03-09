@@ -25,7 +25,9 @@ const Slider = () => {
                 />
             </form>
             <p>€ {price}</p>
+            <div className="button-container">
             <ProgressButton currentAnswer={price} questionID="5" />
+            </div>
         </>
     );
 }

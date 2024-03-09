@@ -10,7 +10,7 @@ const Radiobuttons = ({ label, id, children, handleKeyDown, ...delegated }) => {
           }}>
             <input
                 type="radio"
-                tabindex={-1}
+                tabIndex={-1}
                 id={id}
                 className="radio-input"
                 {...delegated}

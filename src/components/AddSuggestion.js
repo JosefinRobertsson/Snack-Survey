@@ -43,7 +43,7 @@ const AddSuggestion = () => {
     return (
         <>
             <h2>Add a suggestion</h2>
-            <div className="suggestion-container">
+            <div className="suggestion-container option-container">
                 <form onSubmit={(event) => {
                     event.preventDefault();
                 }}>
@@ -66,10 +66,12 @@ const AddSuggestion = () => {
                     }
                 </form>
             </div>
+            <div className="button-container">
             {showProgressButton &&
                 <ProgressButton currentAnswer={suggestion} questionID="7" 
                     progressButtonName={progressButtonName} />
             }
+            </div>
         </>
     )
 }

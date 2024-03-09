@@ -31,10 +31,9 @@ const Flavor = ({ data }) => {
 
     return (
         <>
-            <div className="flavorGroup-container">
-                <h2>Choose your flavors</h2>
+        <h2>Choose your flavors</h2>
+            <div className="flavor-container option-container">
                 {availableFlavors.map((flavorValue) => (
-
                     <Checkboxes
                         label={`${flavorValue}`}
                         id={`${flavorValue}`}
@@ -53,7 +52,9 @@ const Flavor = ({ data }) => {
                     </Checkboxes>
                 ))}
             </div>
+            <div className="button-container">
             {showProgressButton && <ProgressButton currentAnswer={flavor} questionID='4' />}
+            </div>
         </>
     )
 }

@@ -42,7 +42,9 @@ const SummaryScreen = () => {
             {flavor.length === 1 && <p>{flavorDisplay()}</p>}
             {flavor.length > 1 && <p>Your flavors of choice are {flavorDisplay()}</p>}
             <p>Does this sound about right? If so please submit your answers!</p>
+            <div className="button-container">
             <EndButton questionID='8' />
+            </div>
         </>
     );
 }

@@ -27,8 +27,8 @@ console.log('availableTastes:', availableTastes);
     
     return (
         <>
-        <div className="tasteGroup-container">
-            <h2>Now, pick a taste</h2>    
+        <h2>Now, pick a taste</h2>
+        <div className="taste-container option-container">    
             {availableTastes.map((tasteValue) => (
                     <Radiobuttons
                         label={`${tasteValue}`}
@@ -46,7 +46,9 @@ console.log('availableTastes:', availableTastes);
                     </Radiobuttons>
             ))}
         </div>
+        <div className="button-container">
         {showProgressButton && <ProgressButton currentAnswer={taste} questionID="2" />}
+        </div>
         </>
     );
 }

@@ -13,6 +13,7 @@ const ImportantChoice = () => {
     return (
         <>
         <h2>Would you like to see more of any of these types of snacks at LocalMart?</h2>
+        <div className="important-container option-container">
         {categories.map((categoryValue) => (
             <Checkboxes 
                 label={categoryValue}
@@ -30,7 +31,10 @@ const ImportantChoice = () => {
                 {categoryValue}
             </Checkboxes>
         ))}
+        </div>
+        <div className="button-container">
         <ProgressButton currentAnswer={importantCategories} questionID="6" />
+        </div>
         </>
     );
 }

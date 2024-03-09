@@ -1,6 +1,5 @@
 import React from "react";
 import Radiobuttons from "./Radiobuttons";
-//import { range } from "../utils";
 import { ProgressContext } from './ProgressProvider';
 import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import ProgressButton from './ProgressButton';
@@ -30,8 +29,8 @@ const Type = ({ data }) => {
     };
     return (
         <>
-            <div className="typeGroup-container">
-                <h2>What type of snack do you think we need more of?</h2>
+        <h2>What type of snack do you think we need more of?</h2>
+            <div className="type-container option-container">
                 {uniqueTypes.map((typeValue) => (
                     <Radiobuttons
                         label={`${typeValue}`}
@@ -50,7 +49,9 @@ const Type = ({ data }) => {
                 ))}
 
             </div>
+            <div className="button-container">
             {showProgressButton && <ProgressButton currentAnswer={type} questionID="1" />}
+            </div>
         </>
     );
 }

@@ -25,8 +25,8 @@ const Texture = ({ data }) => {
 
     return (
         <>
-            <div className="textureGroup-container">
-                <h2>Pick a texture</h2>
+            <h2>Pick a texture</h2>
+            <div className="texture-container option-container">
                 {availableTextures.map((textureValue) => (
                     <Radiobuttons
                         label={`${textureValue}`}
@@ -44,7 +44,9 @@ const Texture = ({ data }) => {
                     </Radiobuttons>
                 ))}
             </div>
+            <div className="button-container">
             {showProgressButton && <ProgressButton currentAnswer={texture} questionID="3" />}
+            </div>
 
         </>
     );
