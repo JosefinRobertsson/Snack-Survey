@@ -5,16 +5,16 @@ import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import ProgressButton from './ProgressButton';
 
 const Taste = ({ data }) => {
-const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
-const {type, taste, setTaste} = React.useContext(TypeTasteTextureContext);
-const availableTastes = [...new Set(data.filter((snack) => snack.type === type).map((snack) => snack.taste))];
-console.log('availableTastes:', availableTastes);
-   
+    const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
+    const { type, taste, setTaste } = React.useContext(TypeTasteTextureContext);
+    const availableTastes = [...new Set(data.filter((snack) => snack.type === type).map((snack) => snack.taste))];
+    console.log('availableTastes:', availableTastes);
+
     React.useEffect(() => {
         if (taste === '') {
-        setShowProgressButton(false);
+            setShowProgressButton(false);
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     //arrow function chaining ("currying") defines a function that takes selectedTaste as a parameter and returns another function that takes an event as a parameter
@@ -24,12 +24,12 @@ console.log('availableTastes:', availableTastes);
             setShowProgressButton(true);
         }
     };
-    
+
     return (
         <>
-        <h2>Now, pick a taste</h2>
-        <div className="taste-container option-container">    
-            {availableTastes.map((tasteValue) => (
+            <h2>Now, pick a taste</h2>
+            <div className="taste-container option-container">
+                {availableTastes.map((tasteValue) => (
                     <Radiobuttons
                         label={`${tasteValue}`}
                         name="TasteChoice"
@@ -44,11 +44,11 @@ console.log('availableTastes:', availableTastes);
                         handleKeyDown={handleKeyDown(tasteValue)}>
                         {tasteValue}
                     </Radiobuttons>
-            ))}
-        </div>
-        <div className="button-container">
-        {showProgressButton && <ProgressButton currentAnswer={taste} questionID="2" />}
-        </div>
+                ))}
+            </div>
+            <div className="button-container">
+                {showProgressButton && <ProgressButton currentAnswer={taste} questionID="2" />}
+            </div>
         </>
     );
 }

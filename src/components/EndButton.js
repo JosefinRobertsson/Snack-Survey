@@ -31,13 +31,16 @@ const handleBackClick = () => {
             suggestion: suggestion
         }
         setFormData(newFormData);
-        console.log('formData:', newFormData);
-    }       
+    }  
+    
+    React.useEffect(() => {
+        console.log('formData:', formData);
+    }, [formData]);
 
     return (
         <>
          <BaseButton id="restartBtn"
-         onClick={() => handleBackClick()}>Start over</BaseButton>
+         onClick={() => handleBackClick()}>{'<<'} Start over</BaseButton>
         <BaseButton id="endBtn"
         onClick={() => handleSubmit()}>Submit answers</BaseButton>
         </>

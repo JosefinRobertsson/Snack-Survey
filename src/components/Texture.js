@@ -45,7 +45,7 @@ const Texture = ({ data }) => {
                 ))}
             </div>
             <div className="button-container">
-            {showProgressButton && <ProgressButton currentAnswer={texture} questionID="3" />}
+                {showProgressButton && <ProgressButton currentAnswer={texture} questionID="3" />}
             </div>
 
         </>

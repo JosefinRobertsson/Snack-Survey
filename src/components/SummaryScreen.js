@@ -33,7 +33,7 @@ const SummaryScreen = () => {
     return (
         <>
             <h1>Summary</h1>
-            <p>According to your results you would like to see more {texture} {taste} {type} here at LocalMart.
+            <p>According to your results you would like to see more {texture} {taste} {type} here at YourCornerStore.
                 Perhaps some {randomizedSnack()}?</p>
 
             <p>You spend an average of €{price} on a snack purchase

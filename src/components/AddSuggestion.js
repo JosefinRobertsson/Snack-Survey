@@ -28,9 +28,9 @@ const AddSuggestion = () => {
     
         // Update progress button text
         if (dropdown === 'yes' && suggestion.length >= 4) {
-            setProgressButtonName('Submit');
+            setProgressButtonName('Submit >');
         } else if (dropdown === 'no') {
-            setProgressButtonName('Next');
+            setProgressButtonName('Next >');
         }
     }, [dropdown, suggestion]);
 
@@ -48,11 +48,11 @@ const AddSuggestion = () => {
                     event.preventDefault();
                 }}>
                     <label htmlFor="dropdown">Would you like to suggest a snack?</label>
-                    <select id="dropdown" name="dropdown"
+                    <select id="dropdown" name="dropdown" value="empty"
                         onChange={event => {
                             setDropdown(event.target.value);
                         }}>
-                        <option value="empty" disabled selected></option>
+                        <option value="empty" disabled ></option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>

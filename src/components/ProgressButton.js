@@ -38,10 +38,10 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonN
     }
 
     return (
-        <>
-            <BaseButton id="backBtn" className={backBtnClass} onClick={() => handleProgressClick("backBtn")}>Back</BaseButton>
-            <BaseButton id="nextBtn" onClick={() => handleProgressClick("nextBtn")}>{progressButtonName ? progressButtonName : 'Next'}</BaseButton>
-        </>
+        <div className="button-inner">
+            <BaseButton id="backBtn" className={backBtnClass} onClick={() => handleProgressClick("backBtn")}>{'<'} Back</BaseButton>
+            <BaseButton id="nextBtn" onClick={() => handleProgressClick("nextBtn")}>{progressButtonName ? progressButtonName  : 'Next >'}</BaseButton>
+        </div>
     );
 }
 

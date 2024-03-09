@@ -49,7 +49,7 @@ const Type = ({ data }) => {
                 ))}
 
             </div>
-            <div className="button-container">
+            <div  className="button-container">
             {showProgressButton && <ProgressButton currentAnswer={type} questionID="1" />}
             </div>
         </>
