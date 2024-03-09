@@ -21,12 +21,12 @@ const SummaryScreen = () => {
     // separate the flavors to display in a readable format
     const flavorDisplay = () => {
         if (flavor.length === 1) {
-            return ` Your flavor of choice is ${flavor[0]}`;
+            return ` Your flavor of choice is ${flavor[0]}.`;
         } else if (flavor.length === 2) {
-            return `${flavor[0]} and ${flavor[1]}`;
+            return `${flavor[0]} and ${flavor[1]}.`;
         } else if (flavor.length > 2) {
             const lastFlavor = flavor.pop();
-            return `${flavor.join(', ')} and ${lastFlavor}`;
+            return `${flavor.join(', ')} and ${lastFlavor}.`;
         }
     }
 

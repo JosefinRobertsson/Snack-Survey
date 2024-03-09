@@ -10,6 +10,7 @@ const Flavor = ({ data }) => {
     const { flavor } = React.useContext(CheckboxChoiceContext);
     const { type, taste, texture } = React.useContext(TypeTasteTextureContext);
     const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
+    const [headline , setHeadline] = React.useState('flavor');
 
     //Filter snackbase(data) to include only the flavors from the chosen type, taste, and texture snacks. Map each snack to get its flavors, then flatten the nested arrays of flavors into a single array. Use new Set to remove duplicate flavors, then spread the Set back into an array.
     const availableFlavors = [...new Set(data
@@ -22,16 +23,21 @@ const Flavor = ({ data }) => {
             setShowProgressButton(false);
         } else {
             setShowProgressButton(true);
+        };
+
+        if (availableFlavors.length > 1) {
+            setHeadline('flavors');
         }
-    }, [flavor, setShowProgressButton]);
+        
+    }, [flavor, setShowProgressButton, availableFlavors.length]);
 
-
+console.log('availableFlavors:', availableFlavors.length);
     const { handleCheckboxChange, handleCheckboxKeyDown } = useCheckboxChange('4');
 
 
     return (
         <>
-        <h2>Choose your flavors</h2>
+        <h2>Choose your {headline}</h2>
             <div className="flavor-container option-container">
                 {availableFlavors.map((flavorValue) => (
                     <Checkboxes
