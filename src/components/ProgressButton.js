@@ -5,6 +5,7 @@ import { CheckboxChoiceContext } from './CheckboxChoiceProvider';
 import { PriceContext } from './PriceProvider';
 import { SnackSuggestionContext } from './SnackSuggestionProvider';
 import { resetAnswers } from '../helpers/reset-state.helpers';
+import { BaseButton } from '../styles/buttons.styles';
 
 const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonName }) => {
     const { progress, setProgress } = React.useContext(ProgressContext);
@@ -38,8 +39,8 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonN
 
     return (
         <>
-            <button id="backBtn" className={backBtnClass} onClick={() => handleProgressClick("backBtn")}>Back</button>
-            <button id="nextBtn" onClick={() => handleProgressClick("nextBtn")}>{progressButtonName ? progressButtonName : 'Next'}</button>
+            <BaseButton id="backBtn" className={backBtnClass} onClick={() => handleProgressClick("backBtn")}>Back</BaseButton>
+            <BaseButton id="nextBtn" onClick={() => handleProgressClick("nextBtn")}>{progressButtonName ? progressButtonName : 'Next'}</BaseButton>
         </>
     );
 }

@@ -24,10 +24,12 @@ code {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
 
 }
 
-h1, label {
+h1, label, button {
   font-family: 'Permanent Marker', cursive;
 }
 

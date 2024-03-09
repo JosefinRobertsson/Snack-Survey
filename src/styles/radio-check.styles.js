@@ -7,7 +7,7 @@ export const Label = styled.label`
   padding: 5px 15px 5px 5px;
 
 &:focus, &:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
     animation: shake 0.5s;
     animation-iteration-count: infinite;
     
@@ -31,6 +31,8 @@ export const Label = styled.label`
 export const CheckedLabel = styled(Label)`
 color: ${({ checked }) => (checked ? 'violet' : 'inherit')};
 font-size: ${({ checked }) => (checked ? '2 rem' : 'inherit')};
+animation: ${({ checked }) => (checked ? 'shake 0.5s' : 'none')};
+animation-iteration-count: infinite;
 &:active {
     color: ${({ checked }) => (checked ? 'inherit' : 'violet')};
   }
