@@ -29,7 +29,7 @@ const Type = ({ data }) => {
     };
     return (
         <>
-        <h2>What type of snack do you think we need more of?</h2>
+        <h2>Which one of these do you like best?</h2>
             <div className="type-container option-container">
                 {uniqueTypes.map((typeValue) => (
                     <Radiobuttons

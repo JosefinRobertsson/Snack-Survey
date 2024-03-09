@@ -56,14 +56,16 @@ const AddSuggestion = () => {
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
+                    <div className="input-container">
                     {isVisible &&
-                        <div>
-                            <label htmlFor="suggestion">Suggestion:</label>
+                        <div className="input-inner">
+                            <label htmlFor="suggestion">Suggestion: </label>
                             <input type="text" id="suggestion" name="suggestion" value={suggestion} min="4" max="40"
                                onChange={handleSuggestionChange}
                             />
                         </div>
                     }
+                    </div>
                 </form>
             </div>
             <div className="button-container">
