@@ -15,7 +15,9 @@ export const App = () => {
         <CheckboxChoiceProvider>
           <PriceProvider>
             <SnackSuggestionProvider>
+              <div className="all-wrapper">
             <AppContent />
+              </div>
             </SnackSuggestionProvider>
           </PriceProvider>
         </CheckboxChoiceProvider>
