@@ -31,10 +31,9 @@ const Taste = ({ data }) => {
             <div className="taste-container option-container">
                 {availableTastes.map((tasteValue) => (
                     <Radiobuttons
-                        label={`${tasteValue}`}
                         name="TasteChoice"
-                        id={`${tasteValue}`}
-                        key={`${tasteValue}`}
+                        id={tasteValue}
+                        key={tasteValue}
                         value={tasteValue}
                         checked={taste === tasteValue}
                         onChange={(event) => {

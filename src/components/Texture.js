@@ -29,10 +29,9 @@ const Texture = ({ data }) => {
             <div className="texture-container option-container">
                 {availableTextures.map((textureValue) => (
                     <Radiobuttons
-                        label={`${textureValue}`}
-                        name="TasteChoice"
-                        id={`${textureValue}`}
-                        key={`${textureValue}`}
+                        name="TextureChoice"
+                        id={textureValue}
+                        key={textureValue}
                         value={textureValue}
                         checked={texture === textureValue}
                         onChange={(event) => {

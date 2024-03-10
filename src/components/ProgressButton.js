@@ -7,7 +7,7 @@ import { SnackSuggestionContext } from './SnackSuggestionProvider';
 import { resetAnswers } from '../helpers/reset-state.helpers';
 import { BaseButton } from '../styles/buttons.styles';
 
-const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonName }) => {
+const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonName, backButtonName }) => {
     const { progress, setProgress } = React.useContext(ProgressContext);
     const { setType, setTaste, setTexture } = React.useContext(TypeTasteTextureContext);
     const { setFlavor, setImportantCategories } = React.useContext(CheckboxChoiceContext);
@@ -39,7 +39,7 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonN
 
     return (
         <div className="button-inner">
-            <BaseButton id="backBtn" className={backBtnClass} onClick={() => handleProgressClick("backBtn")}>{'<'} Back</BaseButton>
+            <BaseButton id="backBtn" className={backBtnClass} onClick={() => handleProgressClick("backBtn")}> {backButtonName ? backButtonName  : '< Back'}</BaseButton>
             <BaseButton id="nextBtn" onClick={() => handleProgressClick("nextBtn")}>{progressButtonName ? progressButtonName  : 'Next >'}</BaseButton>
         </div>
     );

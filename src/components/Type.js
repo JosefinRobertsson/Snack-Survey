@@ -29,14 +29,13 @@ const Type = ({ data }) => {
     };
     return (
         <>
-        <h2>Which one of these do you like best?</h2>
+            <h2>Which one of these do you like best?</h2>
             <div className="type-container option-container">
                 {uniqueTypes.map((typeValue) => (
                     <Radiobuttons
-                        label={`${typeValue}`}
                         name="TypeChoice"
-                        id={`${typeValue}`}
-                        key={`${typeValue}`}
+                        id={typeValue}
+                        key={typeValue}
                         value={typeValue}
                         checked={type === typeValue}
                         onChange={(event) => {
@@ -49,8 +48,8 @@ const Type = ({ data }) => {
                 ))}
 
             </div>
-            <div  className="button-container">
-            {showProgressButton && <ProgressButton currentAnswer={type} questionID="1" />}
+            <div className="button-container">
+                {showProgressButton && <ProgressButton currentAnswer={type} questionID="1" backButtonName="Start over" />}
             </div>
         </>
     );
