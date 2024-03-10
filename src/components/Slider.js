@@ -1,6 +1,8 @@
 import React from 'react';
 import ProgressButton from './ProgressButton';
 import { PriceContext } from './PriceProvider';
+import { PriceSlider } from '../styles/slider.styles';
+
 
 const Slider = () => {
     const { price, setPrice } = React.useContext(PriceContext);
@@ -15,10 +17,15 @@ const Slider = () => {
                 }}
             >
                 <label htmlFor="price-slider">
-                    
+
                 </label>
-                <input
-                    type="range" min={1} max={20} value={price} id="price-slider" className="slider"
+                <PriceSlider
+                    type="range"
+                    min={1} max={20}
+                    value={price}
+                    id="price-slider"
+                    className="slider"
+                    tabIndex="0"
                     onChange={event => {
                         setPrice(event.target.value);
                     }}
@@ -26,7 +33,7 @@ const Slider = () => {
             </form>
             <p>€ {price}</p>
             <div className="button-container">
-            <ProgressButton currentAnswer={price} questionID="5" />
+                <ProgressButton currentAnswer={price} questionID="5" />
             </div>
         </>
     );

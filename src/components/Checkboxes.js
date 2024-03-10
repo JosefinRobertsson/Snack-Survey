@@ -7,7 +7,7 @@ const Checkboxes = ({ label, id, children, onKeyDown, ...delegated }) => {
             <form>
                 <input
                     type="checkbox"
-                    tabIndex={-1}
+                    tabIndex={-1} //make sure the checkbox isn't targeted when tabbing
                     id={id}
                     {...delegated}
                     onKeyDown={onKeyDown}

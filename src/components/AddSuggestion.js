@@ -3,11 +3,12 @@ import React from 'react';
 import { ProgressContext } from './ProgressProvider';
 import ProgressButton from './ProgressButton';
 import { SnackSuggestionContext } from './SnackSuggestionProvider';
+import { StyledSelect } from '../styles/dropdown.styles';
 
 
 const AddSuggestion = () => {
     const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
-   const {suggestion, setSuggestion, dropdown, setDropdown} = React.useContext(SnackSuggestionContext);
+    const { suggestion, setSuggestion, dropdown, setDropdown } = React.useContext(SnackSuggestionContext);
     const [progressButtonName, setProgressButtonName] = React.useState('Next');
     const [isVisible, setIsVisible] = React.useState(false);
 
@@ -18,14 +19,14 @@ const AddSuggestion = () => {
         } else {
             setIsVisible(false);
         }
-    
+
         // Show/Hide the progress button
         if (dropdown === 'empty' || (dropdown === 'yes' && suggestion.length < 4)) {
             setShowProgressButton(false);
         } else {
             setShowProgressButton(true);
         }
-    
+
         // Update progress button text
         if (dropdown === 'yes' && suggestion.length >= 4) {
             setProgressButtonName('Submit >');
@@ -38,7 +39,7 @@ const AddSuggestion = () => {
     const handleSuggestionChange = React.useCallback((event) => {
         setSuggestion(event.target.value);
     }, []);
-    
+
 
     return (
         <>
@@ -48,31 +49,37 @@ const AddSuggestion = () => {
                     event.preventDefault();
                 }}>
                     <label htmlFor="dropdown">Would you like to suggest a snack?</label>
-                    <select id="dropdown" name="dropdown" value="empty"
-                        onChange={event => {
+                    <StyledSelect
+                        id="dropdown"
+                        className="styledSelect"
+                        name="dropdown"
+                        value="empty"
+                        onChange={(event) => {
                             setDropdown(event.target.value);
-                        }}>
+                        }}
+                    >
                         <option value="empty" disabled ></option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
-                    </select>
+                    </StyledSelect>
                     <div className="input-container">
-                    {isVisible &&
-                        <div className="input-inner">
-                            <label htmlFor="suggestion">Suggestion: </label>
-                            <input type="text" id="suggestion" name="suggestion" value={suggestion} min="4" max="40"
-                               onChange={handleSuggestionChange}
-                            />
-                        </div>
-                    }
+                        {isVisible &&
+                            <div className="input-inner">
+                                <label htmlFor="suggestion">Suggestion: </label>
+                                <input type="text" id="suggestion" name="suggestion" value={suggestion} min="4" max="40"
+                                    onChange={handleSuggestionChange}
+                                />
+                            </div>
+                        }
                     </div>
+                   
                 </form>
             </div>
             <div className="button-container">
-            {showProgressButton &&
-                <ProgressButton currentAnswer={suggestion} questionID="7" 
-                    progressButtonName={progressButtonName} />
-            }
+                {showProgressButton &&
+                    <ProgressButton currentAnswer={suggestion} questionID="7"
+                        progressButtonName={progressButtonName} />
+                }
             </div>
         </>
     )

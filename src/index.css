@@ -87,27 +87,6 @@ p, h2, h3 {
   padding-top: 5%;
 }
 
-
-/* Radiobuttons and checkboxes
-.radio-label,
-.checkbox-label {
-  cursor: pointer;
-}
-
-.radio-label:focus, 
-.radio-label:hover,
-.checkbox-label:focus,
-.checkbox-label:hover {
-  color: lawngreen;
-  outline: 1px solid lawngreen;
-}
-
-.radio-input:checked + .radio-label,
-.checkbox-input:checked + .checkbox-label {
-  color: lawngreen;
-}
-*/
-
 .hiddenBtn {
   display: none;
 }
