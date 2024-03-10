@@ -2,6 +2,7 @@ import React from 'react';
 import ProgressButton from './ProgressButton';
 import { PriceContext } from './PriceProvider';
 import { PriceSlider } from '../styles/slider.styles';
+import ProgressBar from './ProgressBar';
 
 
 const Slider = () => {
@@ -32,6 +33,7 @@ const Slider = () => {
                 />
             </form>
             <p>€ {price}</p>
+            <ProgressBar />
             <div className="button-container">
                 <ProgressButton currentAnswer={price} questionID="5" />
             </div>

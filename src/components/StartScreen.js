@@ -1,6 +1,8 @@
 import React from 'react';
 import ProgressButton from './ProgressButton';
 
+import ProgressBar from './ProgressBar';
+
 
 const StartScreen = () => {
 

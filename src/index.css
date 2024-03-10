@@ -90,3 +90,38 @@ p, h2, h3 {
 .hiddenBtn {
   display: none;
 }
+
+.progress-wrapper {
+  position: relative;
+  width: 80%;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: -1rem;
+  right: 0;
+}
+
+.progress-container::before {
+  content: '';
+  display: block;
+  padding-top: 10%;
+}
+
+circle {
+   fill: none;
+   stroke: url(#gradient-color);
+   stroke-width: 10px;
+   stroke-dasharray: 274;
+   stroke-dashoffset: 274;
+   animation: anim 1s linear forwards;
+}
+
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 235;
+  }
+}

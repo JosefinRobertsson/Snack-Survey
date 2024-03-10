@@ -5,6 +5,7 @@ import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import { ProgressContext } from './ProgressProvider';
 import { CheckboxChoiceContext } from './CheckboxChoiceProvider';
 import useCheckboxChange from '../hooks/useCheckboxChange.hook';
+import ProgressBar from './ProgressBar';
 
 const Flavor = ({ data }) => {
     const { flavor } = React.useContext(CheckboxChoiceContext);
@@ -57,6 +58,8 @@ const Flavor = ({ data }) => {
                     </Checkboxes>
                 ))}
             </div>
+            {showProgressButton &&
+                    <ProgressBar />}
             <div className="button-container">
                 {showProgressButton && <ProgressButton currentAnswer={flavor} questionID='4' />}
             </div>

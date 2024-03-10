@@ -4,6 +4,7 @@ import { ProgressContext } from './ProgressProvider';
 import ProgressButton from './ProgressButton';
 import { SnackSuggestionContext } from './SnackSuggestionProvider';
 import { StyledSelect } from '../styles/dropdown.styles';
+import ProgressBar from './ProgressBar';
 
 
 const AddSuggestion = () => {
@@ -75,6 +76,8 @@ const AddSuggestion = () => {
                    
                 </form>
             </div>
+            {showProgressButton &&
+                    <ProgressBar />}
             <div className="button-container">
                 {showProgressButton &&
                     <ProgressButton currentAnswer={suggestion} questionID="7"

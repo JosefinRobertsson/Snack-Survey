@@ -3,6 +3,7 @@ import Radiobuttons from './Radiobuttons';
 import { ProgressContext } from './ProgressProvider';
 import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import ProgressButton from './ProgressButton';
+import ProgressBar from './ProgressBar';
 
 const Taste = ({ data }) => {
     const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
@@ -45,6 +46,8 @@ const Taste = ({ data }) => {
                     </Radiobuttons>
                 ))}
             </div>
+            {showProgressButton &&
+                    <ProgressBar />}
             <div className="button-container">
                 {showProgressButton && <ProgressButton currentAnswer={taste} questionID="2" />}
             </div>

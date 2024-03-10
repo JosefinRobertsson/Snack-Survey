@@ -3,6 +3,7 @@ import Checkboxes from './Checkboxes';
 import { CheckboxChoiceContext } from './CheckboxChoiceProvider';
 import ProgressButton from './ProgressButton';
 import useCheckboxChange from '../hooks/useCheckboxChange.hook';
+import ProgressBar from './ProgressBar';
 
 const ImportantChoice = () => {
     const categories = ['Vegan', 'Sugar-free', 'Organic', 'High-protein']
@@ -32,6 +33,7 @@ const ImportantChoice = () => {
             </Checkboxes>
         ))}
         </div>
+        <ProgressBar />
         <div className="button-container">
         <ProgressButton currentAnswer={importantCategories} questionID="6" />
         </div>
