@@ -15,7 +15,7 @@ import SummaryScreen from './SummaryScreen';
 
 export const AppContent = () => {
     const { progress } = React.useContext(ProgressContext);
-  
+
     return (
       <>
         {progress === 0 && 

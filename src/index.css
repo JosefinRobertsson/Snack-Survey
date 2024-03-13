@@ -111,17 +111,3 @@ p, h2, h3 {
   padding-top: 10%;
 }
 
-circle {
-   fill: none;
-   stroke: url(#gradient-color);
-   stroke-width: 10px;
-   stroke-dasharray: 274;
-   stroke-dashoffset: 274;
-   animation: anim 1s linear forwards;
-}
-
-@keyframes anim {
-  100% {
-    stroke-dashoffset: 235;
-  }
-}
