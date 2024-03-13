@@ -18,7 +18,7 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonN
     const prevAnswerRef = React.useRef();
 
     React.useEffect(() => {
-        // Store the current answer in the ref when the component mounts
+        // Store the current answer (the one that is already selected) in the ref when the component mounts
         prevAnswerRef.current = currentAnswer;
         console.log('prevAnswerRef.current useEffect:', prevAnswerRef.current);
         console.log('currentAnswer:', currentAnswer);
@@ -27,11 +27,14 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonN
 
     const handleProgressClick = (id) => {
         if (id === "nextBtn") {
+            // reset the state of all coming questions if the user changes their answer
             if ((typeof prevAnswerRef.current != "undefined" && prevAnswerRef.current !== currentAnswer) || (questionID === "0")) {
                 resetAnswers(questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories, setSuggestion, setDropdown);
                 console.log('User changed their answer!');
             }
+            
             setProgress(progress + 1);
+            
         } else if (id === "backBtn") {
             setProgress(progress - 1);
         }
