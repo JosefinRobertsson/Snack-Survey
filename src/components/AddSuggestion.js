@@ -77,7 +77,7 @@ const AddSuggestion = () => {
                 </form>
             </div>
             {showProgressButton &&
-                    <ProgressBar ProgressBarID={6} />}
+                    <ProgressBar previousStep={6} />}
             <div className="button-container">
                 {showProgressButton &&
                     <ProgressButton currentAnswer={suggestion} questionID="7"

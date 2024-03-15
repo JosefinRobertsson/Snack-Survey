@@ -33,7 +33,7 @@ const ImportantChoice = () => {
             </Checkboxes>
         ))}
         </div>
-        <ProgressBar ProgressBarID={5} />
+        <ProgressBar previousStep={5} />
         <div className="button-container">
         <ProgressButton currentAnswer={importantCategories} questionID="6" />
         </div>

@@ -33,7 +33,7 @@ const Slider = () => {
                 />
             </form>
             <p>€ {price}</p>
-            <ProgressBar ProgressBarID={4} />
+            <ProgressBar previousStep={4} />
             <div className="button-container">
                 <ProgressButton currentAnswer={price} questionID="5" />
             </div>

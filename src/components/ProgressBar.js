@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledProgressBar } from '../styles/progress-bar.styles';
 import { ProgressContext } from './ProgressProvider';
 
-const ProgressBar = ({ ProgressBarID }) => {
+const ProgressBar = ({ previousStep }) => {
     const { progress, prevProgress } = React.useContext(ProgressContext);
     const [isIncreasing, setIsIncreasing] = React.useState(false);
 
@@ -17,55 +17,26 @@ const ProgressBar = ({ ProgressBarID }) => {
 
     const calculateDashoffset = (directionValue) => {
         const totalLength = 274; // Total length of the stroke-dasharray
-        console.log('directionValue in func:', directionValue);
-        console.log('isIncreasing in func:', isIncreasing);
         if (isIncreasing) {
-            console.log('INCREASED');
             return totalLength * (1 - directionValue / 7);
         } else {
-            console.log('DECREASED');
-            //2 värden och animation, men från full bar
-            //return totalLength - (totalLength * (1 - directionValue / 7));
-            //2 värdeb och animation, men från start på senaste steg
-            //return totalLength * (1 - directionValue / 7);
             return totalLength * (1 - (directionValue + 1) / 7);
         }
     };
-/*
-    const calculateDashoffset = (directionValue) => {
-        const totalLength = 274; // Total length of the stroke-dasharray
-        console.log('directionValue:', directionValue);
-        console.log('isIncreasing in func:', isIncreasing);
-        if (isIncreasing) {
-            console.log('progress increased ');
-            return totalLength * (1 - directionValue / 7);
-        } else {
-            console.log('progress decreased ');
-            return totalLength - (totalLength * (1 - directionValue / 7));
-            //return totalLength * (1 + progress / 7);
-        }
-    };
-    */
       
-    console.log('ProgressBarID:', ProgressBarID);
-    console.log('progress:', progress);
-    console.log('prevProgress:', prevProgress);
-
-    // Determine if progress is increasing or decreasing
-    //const isIncreasing = progress > ProgressBarID;
-    console.log('isIncreasing:', isIncreasing);
-    const from = calculateDashoffset(isIncreasing ? ProgressBarID : progress);
+    // Call calculateDashoffset with the correct values depending on whether the progress is increasing or decreasing
+    const from = calculateDashoffset(isIncreasing ? previousStep : progress);
     console.log('from:', from);
     
-    const to = calculateDashoffset(isIncreasing ? progress : ProgressBarID);
+    const to = calculateDashoffset(isIncreasing ? progress : previousStep);
     console.log('to:', to);
     
 
 
     /*
-    const from = isIncreasing ? calculateDashoffset(ProgressBarID) :  calculateDashoffset(progress);
+    const from = isIncreasing ? calculateDashoffset(previousStep) :  calculateDashoffset(progress);
     
-    const to = isIncreasing ? calculateDashoffset(progress) : calculateDashoffset(ProgressBarID);
+    const to = isIncreasing ? calculateDashoffset(progress) : calculateDashoffset(previousStep);
     */
 
     return (

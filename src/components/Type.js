@@ -49,7 +49,7 @@ const Type = ({ data }) => {
                 ))}
             </div>
             {showProgressButton &&
-                    <ProgressBar ProgressBarID={0} />}
+                    <ProgressBar previousStep={0} />}
             <div className="button-container">
                 {showProgressButton &&
                     <ProgressButton currentAnswer={type} questionID="1" backButtonName="Start over" />}
