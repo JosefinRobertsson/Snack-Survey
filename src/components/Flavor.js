@@ -59,7 +59,7 @@ const Flavor = ({ data }) => {
                 ))}
             </div>
             {showProgressButton &&
-                    <ProgressBar />}
+                    <ProgressBar ProgressBarID={3} />}
             <div className="button-container">
                 {showProgressButton && <ProgressButton currentAnswer={flavor} questionID='4' />}
             </div>

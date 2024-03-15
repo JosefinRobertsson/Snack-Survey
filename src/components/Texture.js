@@ -45,7 +45,7 @@ const Texture = ({ data }) => {
                 ))}
             </div>
             {showProgressButton &&
-                    <ProgressBar />}
+                    <ProgressBar ProgressBarID={2} />}
             <div className="button-container">
                 {showProgressButton && <ProgressButton currentAnswer={texture} questionID="3" />}
             </div>

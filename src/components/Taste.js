@@ -47,7 +47,7 @@ const Taste = ({ data }) => {
                 ))}
             </div>
             {showProgressButton &&
-                    <ProgressBar />}
+                    <ProgressBar ProgressBarID={1} />}
             <div className="button-container">
                 {showProgressButton && <ProgressButton currentAnswer={taste} questionID="2" />}
             </div>
