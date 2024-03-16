@@ -4,9 +4,9 @@ import { ProgressContext } from './ProgressProvider';
 
 const ProgressBar = ({ previousStep }) => {
     const { progress, prevProgress } = React.useContext(ProgressContext);
-    const [isIncreasing, setIsIncreasing] = React.useState(false);
-    const [from, setFrom] = React.useState(0);
-    const [to, setTo] = React.useState(0);
+    const [isIncreasing, setIsIncreasing] = React.useState(null);
+    const [from, setFrom] = React.useState(null);
+    const [to, setTo] = React.useState(null);
     const [latestStep, setLatestStep] = React.useState(0);
 
     React.useEffect(() => {
@@ -19,28 +19,35 @@ const ProgressBar = ({ previousStep }) => {
         console.log('isIncreasing updated:');
     }, [progress, prevProgress]);
 
+    const calculateDashoffset = (directionValue) => {
+        const totalLength = 274; // Total length of the stroke-dasharray
+        console.log('directionValue:', directionValue);
+        if (isIncreasing) {
+            return totalLength * (1 - directionValue / 7);
+        } else {
+            return totalLength * (1 - (directionValue + 1) / 7);
+        }
+    };
 
-    // Define calculateDashoffset inside useEffect to ensure it gets the latest isIncreasing value
     React.useEffect(() => {
-        const calculateDashoffset = (directionValue) => {
-            const totalLength = 274; // Total length of the stroke-dasharray
-            console.log('directionValue:', directionValue);
-            if (isIncreasing) { 
-                return totalLength * (1 - directionValue / 7);
-            } else {
-                return totalLength * (1 - (directionValue + 1) / 7);
-            }
-        };
+        // Calculate from and to when progress and isIncreasing are set. They are initialized as null. This useEffect will run when they are set, to prevent an unnecessary extra render when they are still null, which they are every time the parent component changes.
+        if (progress !== null && isIncreasing !== null) {
+            const newFrom = calculateDashoffset(isIncreasing ? previousStep : latestStep);
+            const newTo = calculateDashoffset(isIncreasing ? latestStep : previousStep);
+            setFrom(newFrom);
+            setTo(newTo);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [progress, isIncreasing, previousStep, latestStep]);
 
+    // Render null if any state values are still null
+    if (from === null || to === null || isIncreasing === null) {
+        return null;
+    }
 
-         // Update state with new values
-         setFrom(_prevFrom => calculateDashoffset(isIncreasing ? previousStep : latestStep));
-         setTo(_prevTo => calculateDashoffset(isIncreasing ? latestStep : previousStep));
-         
-    }, [isIncreasing, previousStep, latestStep]);
     console.log('from:', from);
     console.log('to:', to);
-    
+
     return (
         <div className="progress-wrapper">
             <div className="progress-container">
@@ -49,9 +56,9 @@ const ProgressBar = ({ previousStep }) => {
                         <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <linearGradient id="gradient-color"
-                                x1="0%" y1="0%" x2="0%" y2="100%">
+                                    x1="0%" y1="0%" x2="0%" y2="100%">
                                     <stop offset="20%" stopColor="#EE82EE" />
-                                    <stop offset="90%" stopColor="#800080" 
+                                    <stop offset="90%" stopColor="#800080"
                                     />
                                 </linearGradient>
                             </defs>
