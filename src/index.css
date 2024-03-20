@@ -9,11 +9,33 @@ body {
   background-color: #282c34;
   color: white;
   min-height: 100vh;
-  box-sizing: border-box;
+  line-height: calc(1em + 0.5rem);
+  /*improves text readability on MacOS which still uses subpixel antialiasing. No effect on Windows, Linux, mobile*/
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
   font-size: 22px;
+}
+
+* {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input {
+  font: inherit;
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
 code {
@@ -29,16 +51,27 @@ code {
   min-height: 100vh;
   max-width: 800px;
   margin: 0 auto;
-
 }
 
-h1, label, button {
+h1, label, select, button {
   font-family: 'Permanent Marker', cursive;
 }
 
 p, h2, h3 {
   font-family: 'Cairo', sans-serif;
   font-style: italic;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h1, h2 {
+  margin-bottom: 2rem;
+}
+
+.capital-letter {
+  font-size: 120%;
 }
 
 .option-container {
@@ -50,6 +83,10 @@ p, h2, h3 {
 .checkbox-input {
   position: absolute;
   opacity: 0;
+}
+
+label {
+  margin-bottom: 1rem;
 }
 
 #dropdown {
@@ -70,7 +107,7 @@ p, h2, h3 {
 .input-container {
   position: relative;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* aspect ratio box to reserve space for dynamic content */
@@ -87,6 +124,10 @@ p, h2, h3 {
   padding-top: 5%;
 }
 
+.input-inner:nth-child(1) {
+  font-size: 0.8rem;
+}
+
 .hiddenBtn {
   display: none;
 }
@@ -101,7 +142,7 @@ p, h2, h3 {
   align-items: center;
   justify-content: flex-end;
   position: absolute;
-  top: -1rem;
+  top: -0.6rem;
   right: 0;
 }
 
