@@ -6,11 +6,13 @@ import ProgressButton from './ProgressButton';
 import ProgressBar from "./ProgressBar";
 
 const Type = ({ data }) => {
-    const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
+    const { showProgressBar, setShowProgressBar, showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
     const { type, setType } = React.useContext(TypeTasteTextureContext);
     //use Set to store unique values
     const uniqueTypes = [...new Set(data.map((snack) => snack.type))];
+    console.log('uniqueTypes:', uniqueTypes);
 
+    //This check is nececcary since the user can go back to previous questions and change their answers. We want to show the progress button only when there is a valid answer
     React.useEffect(() => {
         if (type === '') {
             setShowProgressButton(false);
@@ -19,8 +21,10 @@ const Type = ({ data }) => {
     }, []);
 
     React.useEffect(() => {
-        console.log('type:', type);
-    }, [type]);
+        if (type !== '' && showProgressButton) {
+            setShowProgressBar(true);
+        }
+    }, [type, showProgressButton, setShowProgressBar]);
 
     const handleKeyDown = (selectedType) => (e) => {
         if (e.key === 'Enter') {
@@ -48,7 +52,7 @@ const Type = ({ data }) => {
                     </Radiobuttons>
                 ))}
             </div>
-            {showProgressButton &&
+            {showProgressBar &&
                     <ProgressBar previousStep={0} />}
             <div className="button-container">
                 {showProgressButton &&
