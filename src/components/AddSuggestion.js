@@ -67,23 +67,25 @@ const AddSuggestion = () => {
                         {isVisible &&
                             <div className="input-inner">
                                 <label htmlFor="suggestion">Suggestion: </label>
+                                <span>
+                                <span className={suggestion.length >= 0 && suggestion.length <=3 ? "red-text" : ""}>{suggestion.length}</span>/40</span>
                                 <input type="text" id="suggestion" name="suggestion" value={suggestion} min="4" max="40"
                                     onChange={handleSuggestionChange}
                                 />
                             </div>
                         }
-                    </div>
-                   
-                </form>
             </div>
-            {showProgressButton &&
-                    <ProgressBar previousStep={6} />}
-            <div className="button-container">
-                {showProgressButton &&
-                    <ProgressButton currentAnswer={suggestion} questionID="7"
-                        progressButtonName={progressButtonName} />
-                }
-            </div>
+
+        </form >
+            </div >
+    { showProgressButton &&
+    <ProgressBar previousStep={6} />}
+<div className="button-container">
+    {showProgressButton &&
+        <ProgressButton currentAnswer={suggestion} questionID="7"
+            progressButtonName={progressButtonName} />
+    }
+</div>
         </>
     )
 }
