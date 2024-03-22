@@ -5,6 +5,7 @@ import { PriceContext } from './PriceProvider';
 import { SnackSuggestionContext } from './SnackSuggestionProvider';
 import useSnackRandomizer from '../hooks/useSnackRandomizer.hook';
 import EndButton from './EndButton';
+import { ResultSpan } from '../styles/summary.styles';
 
 const SummaryScreen = () => {
     const { type, taste, texture } = React.useContext(TypeTasteTextureContext);
@@ -21,15 +22,15 @@ const SummaryScreen = () => {
     // separate the flavors to display in a readable format adding spans in correct places
     const flavorDisplay = () => {
         if (flavor.length === 1) {
-            return ["Your flavor of choice is ", <span key={0} className="result">{flavor[0]}</span>];
+            return ["Your flavor of choice is ", <ResultSpan key={0} className="result">{flavor[0]}</ResultSpan>];
         } else if (flavor.length === 2) {
             return [
-                <span key={0} className="result">{flavor[0]}</span>,
-                " and ", <span key={1} className="result"> {flavor[1]}</span>
+                <ResultSpan key={0}>{flavor[0]}</ResultSpan>,
+                " and ", <ResultSpan key={1}> {flavor[1]}</ResultSpan>
             ];
         } else if (flavor.length > 2) {
             const flavoredItems = flavor.map((item, index) => (
-                <span key={index} className="result">{item}{index !== flavor.length - 1 ? ', ' : ''}</span>
+                <ResultSpan key={index}>{item}{index !== flavor.length - 1 ? ', ' : ''}</ResultSpan>
             ));
             flavoredItems.splice(flavoredItems.length - 1, 0, ' and ');
             return flavoredItems;
@@ -40,12 +41,12 @@ const SummaryScreen = () => {
         <>
             <h1>Summary</h1>
             <div className="summary-container">
-                <p>According to your results you would like to see more <span className="result">{texture} {taste} {type}</span> here at YourCornerStore.
-                    Perhaps some <span className="result">{randomizedSnack()}</span>?</p>
+                <p>According to your results you would like to see more <ResultSpan>{texture} {taste} {type}</ResultSpan> here at YourCornerStore.
+                    Perhaps some <ResultSpan>{randomizedSnack()}</ResultSpan>?</p>
 
-                <p>You spend an average of <span className="result">€{price}</span> on a snack purchase
-                    {importantCategories.length > 0 ? <span> and you&apos;d like us to stock <span className="result">{categoryList}</span> snacks.</span> : '.'}</p>
-                {suggestion && <p>You specifically suggested: <span className="result">{suggestion}</span></p>}
+                <p>You spend an average of <ResultSpan>€{price}</ResultSpan> on a snack purchase
+                    {importantCategories.length > 0 ? <span> and you&apos;d like us to stock <ResultSpan>{categoryList}</ResultSpan> snacks.</span> : '.'}</p>
+                {suggestion && <p>You specifically suggested: <ResultSpan>{suggestion}</ResultSpan></p>}
                 {flavor.length === 1 && <p>{flavorDisplay()}</p>}
                 {flavor.length > 1 && <p>Your flavors of choice are {flavorDisplay()}</p>}
                 <p>Does this sound about right? If so please submit your answers!</p>
