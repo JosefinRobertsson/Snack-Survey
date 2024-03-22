@@ -8,3 +8,10 @@ border: none;
 margin: 10px;
 background-color: cadetblue;
 `;
+
+export const SubmitResultsButton = styled(BaseButton)`
+  ${props => props.id === 'endBtn' && `
+    background-color: magenta;
+    color: white;
+  `}
+`;

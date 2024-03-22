@@ -5,7 +5,7 @@ import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import { CheckboxChoiceContext } from './CheckboxChoiceProvider';
 import { PriceContext } from './PriceProvider';
 import { SnackSuggestionContext } from './SnackSuggestionProvider';
-import { BaseButton } from '../styles/buttons.styles';
+import { BaseButton, SubmitResultsButton } from '../styles/buttons.styles';
 
 const EndButton = (questionID) => {
     const { setProgress } = React.useContext(ProgressContext);
@@ -41,8 +41,8 @@ const handleBackClick = () => {
         <>
          <BaseButton id="restartBtn"
          onClick={() => handleBackClick()}>{'<<'} Start over</BaseButton>
-        <BaseButton id="endBtn"
-        onClick={() => handleSubmit()}>Submit answers</BaseButton>
+        <SubmitResultsButton id="endBtn"
+        onClick={() => handleSubmit()}>Submit answers</SubmitResultsButton>
         </>
     );
 }

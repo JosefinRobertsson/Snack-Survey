@@ -14,7 +14,7 @@ const glow = keyframes`
 
 export const ResultSpan = styled.span`
   font-family: 'Permanent Marker', cursive;
-  color: cadetblue;
+  color: magenta;
   display: inline-block;
   animation: ${glow} 1.5s infinite alternate;
 `;

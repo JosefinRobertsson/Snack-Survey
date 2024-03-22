@@ -5,6 +5,7 @@ import TypeTasteTextureProvider from './components/TypeTasteTextureProvider';
 import CheckboxChoiceProvider from './components/CheckboxChoiceProvider';
 import PriceProvider from './components/PriceProvider';
 import SnackSuggestionProvider from './components/SnackSuggestionProvider';
+import greenBackground from './images/green.png';
 
 
 
@@ -17,8 +18,11 @@ export const App = () => {
             <SnackSuggestionProvider>
               <div className="all-wrapper">
                 <div className="background-image">
-                  <AppContent />
+                <img src={greenBackground} 
+                  alt="background" />
                 </div>
+               
+                  <AppContent />
               </div>
             </SnackSuggestionProvider>
           </PriceProvider>
