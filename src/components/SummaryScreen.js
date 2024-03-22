@@ -18,32 +18,40 @@ const SummaryScreen = () => {
     // separate the categories with a comma
     const categoryList = importantCategories.length > 0 ? importantCategories.join(', ') : '';
 
-    // separate the flavors to display in a readable format
+    // separate the flavors to display in a readable format adding spans in correct places
     const flavorDisplay = () => {
         if (flavor.length === 1) {
-            return ` Your flavor of choice is ${flavor[0]}.`;
+            return ["Your flavor of choice is ", <span key={0} className="result">{flavor[0]}</span>];
         } else if (flavor.length === 2) {
-            return `${flavor[0]} and ${flavor[1]}.`;
+            return [
+                <span key={0} className="result">{flavor[0]}</span>,
+                " and ", <span key={1} className="result"> {flavor[1]}</span>
+            ];
         } else if (flavor.length > 2) {
-            const lastFlavor = flavor.pop();
-            return `${flavor.join(', ')} and ${lastFlavor}.`;
+            const flavoredItems = flavor.map((item, index) => (
+                <span key={index} className="result">{item}{index !== flavor.length - 1 ? ', ' : ''}</span>
+            ));
+            flavoredItems.splice(flavoredItems.length - 1, 0, ' and ');
+            return flavoredItems;
         }
     }
 
     return (
         <>
             <h1>Summary</h1>
-            <p>According to your results you would like to see more {texture} {taste} {type} here at YourCornerStore.
-                Perhaps some {randomizedSnack()}?</p>
+            <div className="summary-container">
+                <p>According to your results you would like to see more <span className="result">{texture} {taste} {type}</span> here at YourCornerStore.
+                    Perhaps some <span className="result">{randomizedSnack()}</span>?</p>
 
-            <p>You spend an average of €{price} on a snack purchase
-                {importantCategories.length > 0 ? <span> and you&apos;d like us to stock {categoryList} snacks.</span> : '.'}</p>
-            {suggestion && <p>You specifically suggested: {suggestion}</p>}
-            {flavor.length === 1 && <p>{flavorDisplay()}</p>}
-            {flavor.length > 1 && <p>Your flavors of choice are {flavorDisplay()}</p>}
-            <p>Does this sound about right? If so please submit your answers!</p>
+                <p>You spend an average of <span className="result">€{price}</span> on a snack purchase
+                    {importantCategories.length > 0 ? <span> and you&apos;d like us to stock <span className="result">{categoryList}</span> snacks.</span> : '.'}</p>
+                {suggestion && <p>You specifically suggested: <span className="result">{suggestion}</span></p>}
+                {flavor.length === 1 && <p>{flavorDisplay()}</p>}
+                {flavor.length > 1 && <p>Your flavors of choice are {flavorDisplay()}</p>}
+                <p>Does this sound about right? If so please submit your answers!</p>
+            </div>
             <div className="button-container">
-            <EndButton questionID='8' />
+                <EndButton questionID='8' />
             </div>
         </>
     );

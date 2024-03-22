@@ -152,6 +152,15 @@ label {
   padding-top: 10%;
 }
 
-.red-text {
-  color: red;
+.grey-text {
+  color: darkgrey;
+}
+
+.summary-container p:last-of-type {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.result {
+  color:cadetblue;
 }
