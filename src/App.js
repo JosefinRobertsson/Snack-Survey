@@ -16,7 +16,9 @@ export const App = () => {
           <PriceProvider>
             <SnackSuggestionProvider>
               <div className="all-wrapper">
-            <AppContent />
+                <div className="background-image">
+                  <AppContent />
+                </div>
               </div>
             </SnackSuggestionProvider>
           </PriceProvider>

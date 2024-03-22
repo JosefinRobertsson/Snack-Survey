@@ -1,12 +1,20 @@
 import styled, { keyframes } from "styled-components";
 
-const twinkling = keyframes`
-  0% { opacity: 1; }
-  50% { opacity: 0.7; }
-  100% { opacity: 1; }
+const glow = keyframes`
+  0% {
+    text-shadow: 0 0 10px cadetblue, 0 0 20px cadetblue, 0 0 30px cadetblue;
+  }
+  50% {
+    text-shadow: 0 0 20px cadetblue, 0 0 30px cadetblue, 0 0 40px cadetblue;
+  }
+  100% {
+    text-shadow: 0 0 10px cadetblue, 0 0 20px cadetblue, 0 0 30px cadetblue;
+  }
 `;
 
 export const ResultSpan = styled.span`
- color: cadetblue;
- animation: ${twinkling} 1.5s infinite;
- `;
+  font-family: 'Permanent Marker', cursive;
+  color: cadetblue;
+  display: inline-block;
+  animation: ${glow} 1.5s infinite alternate;
+`;

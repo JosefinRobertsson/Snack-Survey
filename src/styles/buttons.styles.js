@@ -6,4 +6,5 @@ border-radius: 10px;
 padding: 3px 10px;
 border: none;
 margin: 10px;
+background-color: cadetblue;
 `;

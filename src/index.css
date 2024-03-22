@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #282c34;
-  color: white;
+  background-color: #f6eff3;
+  color: #000;
   min-height: 100vh;
   line-height: calc(1em + 0.5rem);
   /*improves text readability on MacOS which still uses subpixel antialiasing. No effect on Windows, Linux, mobile*/
