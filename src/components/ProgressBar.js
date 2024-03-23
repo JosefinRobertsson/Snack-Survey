@@ -19,7 +19,7 @@ const ProgressBar = ({ previousStep }) => {
     }, [progress, prevProgress]);
 
     const calculateDashoffset = (directionValue) => {
-        const totalLength = 284; // Total length of the stroke-dasharray
+        const totalLength = 264; // Total length of the stroke-dasharray
         if (isIncreasing) {
             return totalLength * (1 - directionValue / 7);
         } else {
@@ -52,7 +52,7 @@ const ProgressBar = ({ previousStep }) => {
                             <defs>
                                 <linearGradient id="gradient-color"
                                     x1="0%" y1="0%" x2="0%" y2="100%">
-                                    <stop offset="20%" stopColor="#EE82EE" />
+                                    <stop offset="30%" stopColor="#EE82EE" />
                                     <stop offset="90%" stopColor="#800080"
                                     />
                                 </linearGradient>
@@ -61,13 +61,13 @@ const ProgressBar = ({ previousStep }) => {
                                 cx="50%"
                                 cy="50%"
                                 r="42%"
-                                transform="rotate(-90 50 50)"
+                                transform="rotate(-80 50 50)"
                                 fill="none"
                                 stroke="url(#gradient-color)"
                                 strokeWidth="16px"
-                                strokeDasharray="284"
+                                strokeDasharray="264"
                                 strokeDashoffset={from} // Reverse animation if decreasing
-                                strokeLinecap="round"
+                                strokeLinecap="butt"
                             >
                                 <animate
                                     attributeName="stroke-dashoffset"
