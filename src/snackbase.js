@@ -70,7 +70,7 @@ export const snackbase = [
       flavor: ['banana', 'chocolate']
     },
     {
-      name: 'Caramilized almonds',
+      name: 'Caramelized almonds',
       taste: 'sweet',
       type: 'nuts',
       texture: 'crunchy',
