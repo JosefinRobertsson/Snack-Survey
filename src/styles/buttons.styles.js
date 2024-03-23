@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const BaseButton = styled.button`
 cursor: pointer;
@@ -25,9 +25,22 @@ box-shadow: 5px 5px 9px 1px rgba(78, 163, 101, 0.9);
 }
 `;
 
+const pulsate = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+`
+
 export const SubmitResultsButton = styled(BaseButton)`
-  ${props => props.id === 'endBtn' && `
+  ${props => props.id === 'endBtn' && css`
     background-color: rgb(255, 0, 255, 0.8);
     color: white;
+    animation: ${pulsate} 2s ease-in-out infinite;
   `}
 `;
