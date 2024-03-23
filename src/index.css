@@ -117,11 +117,16 @@ h1, h2 {
   border-radius: 4px;
   margin: auto;
   margin-top: 1rem;
+  color: magenta;
 }
 
-.option-inner {
-  display: flex;
-  flex-direction: row;
+.suggestion-counter {
+  font-weight: bold;
+  color: magenta;
+}
+
+.grey-text {
+  color: darkgrey;
 }
 
 .button-container,
@@ -129,6 +134,11 @@ h1, h2 {
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
+}
+
+.option-inner {
+  display: flex;
+  flex-direction: row;
 }
 
 /* aspect ratio box to reserve space for dynamic content */
@@ -145,12 +155,17 @@ h1, h2 {
   padding-top: 5%;
 }
 
+.input-inner {
+  z-index: 1;
+}
+
 .input-inner:nth-child(1) {
   font-size: 0.8rem;
 }
 
 #suggestion {
   border-radius: 5px;
+  margin-bottom: 4rem;
 }
 
 .hiddenBtn {
@@ -177,9 +192,6 @@ h1, h2 {
   padding-top: 10%;
 }
 
-.grey-text {
-  color: darkgrey;
-}
 
 .summary-container p:last-of-type {
   margin-top: 1rem;
