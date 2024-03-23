@@ -28,6 +28,11 @@ const AddSuggestion = () => {
             setShowProgressButton(true);
         }
 
+        // Remove any existing suggestion when the user selects 'No'
+        if (dropdown === 'no') {
+            setSuggestion('');
+        }
+
         // Update progress button text
         if (dropdown === 'yes' && suggestion.length >= 4) {
             setProgressButtonName('Submit >');
