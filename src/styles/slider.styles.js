@@ -4,11 +4,12 @@ export const PriceSlider = styled.input`
     -webkit-appearance: none;
     width: 100%;
     height: 5px;
-    background: white;
+    background: #fa9cfa;
     outline: none;
-    opacity: 0.7;
+    opacity: 1;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    border-radius: 5px;
 
     &:hover,
     &:focus {
@@ -26,12 +27,20 @@ export const PriceSlider = styled.input`
         clip-path: circle();
         width: 20px;
         height: 20px;
-        background: violet;
+        background: rgb(249,210,249);
+        background: radial-gradient(circle, rgba(249,210,249,1) 2%, rgba(250,156,250,1) 23%, rgba(189,63,189,1) 69%, rgba(128,0,128,1) 100%);
         cursor: pointer;
+        transition: width 0.2s, height 0.2s;
 
         &:hover {
             width: 25px;
             height: 25px;
+        }
+
+        /* shrink thumb while pulled */
+        &:active { 
+            width: 15px; 
+            height: 15px;
         }
     }
 
@@ -40,5 +49,11 @@ export const PriceSlider = styled.input`
         height: 25px;
         background: #4CAF50;
         cursor: pointer;
+        transition: width 0.2s, height 0.2s;
     }
+`;
+
+export const RangeUpdate = styled.p`
+    font-family: 'Permanent Marker', cursive;
+    color:inherit;
 `;

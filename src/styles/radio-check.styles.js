@@ -3,11 +3,14 @@ import styled from 'styled-components';
 export const Label = styled.label`
   cursor: pointer;
   display: inline-block;
-  transition: transform 0.4s;
-  padding: 5px 15px 5px 5px;
+  transition: 0.3s;
+  padding: 0px 10px 5px 5px;
+  margin: 0 5px 1rem 5px;
 
 &:focus, &:hover {
-    transform: scale(1.5);
+  color: #800080;
+    text-shadow: 2px 2px 3px rgba(21, 43, 27, 1);
+    border-radius: 15px;
     animation: shake 0.5s;
     animation-iteration-count: infinite;
     
@@ -29,11 +32,18 @@ export const Label = styled.label`
 
 
 export const CheckedLabel = styled(Label)`
-color: ${({ checked }) => (checked ? 'violet' : 'inherit')};
-font-size: ${({ checked }) => (checked ? '2 rem' : 'inherit')};
-animation: ${({ checked }) => (checked ? 'shake 0.5s' : 'none')};
-animation-iteration-count: infinite;
-&:active {
-    color: ${({ checked }) => (checked ? 'inherit' : 'violet')};
+  color: ${({ checked }) => (checked ? 'white' : 'inherit')};
+  background-color: ${({ checked }) => (checked ? 'rgb(245, 184, 231)' : 'inherit')};
+  border-radius: 15px;
+  text-shadow: ${({ checked }) => (checked ? '2px 2px 3px rgba(21, 43, 27, 1)' : 'inherit')}; 
+  animation: ${({ checked }) => (checked ? 'shake 0.5s' : 'none')};
+  animation-iteration-count: infinite;
+  &:active {
+    display: inline;
+    color: #EE82EE;
+    transition: 0.1s;
+   font-size: 1.2em;
+   margin-left: 10px;
+   margin-right: 10px;
   }
 `;

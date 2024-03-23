@@ -18,11 +18,10 @@ export const App = () => {
             <SnackSuggestionProvider>
               <div className="all-wrapper">
                 <div className="background-image">
-                <img src={greenBackground} 
-                  alt="background" />
+                  <img src={greenBackground}
+                    alt="background" />
                 </div>
-               
-                  <AppContent />
+                <AppContent />
               </div>
             </SnackSuggestionProvider>
           </PriceProvider>

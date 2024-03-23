@@ -73,30 +73,30 @@ const AddSuggestion = () => {
                             <div className="input-inner">
                                 <label htmlFor="suggestion">Suggestion: </label>
                                 <span>
-                                <span className={suggestion.length >= 0 && suggestion.length <=3 ? "grey-text" : ""}>{suggestion.length}</span>/50</span>
-                                <input 
-                                type="text" 
-                                id="suggestion" 
-                                name="suggestion" 
-                                value={suggestion} 
-                                min="4" 
-                                maxLength={50}
+                                    <span className={suggestion.length >= 0 && suggestion.length <= 3 ? "grey-text" : ""}>{suggestion.length}</span>/50</span>
+                                <input
+                                    type="text"
+                                    id="suggestion"
+                                    name="suggestion"
+                                    value={suggestion}
+                                    min="4"
+                                    maxLength={50}
                                     onChange={handleSuggestionChange}
                                 />
                             </div>
                         }
-            </div>
+                    </div>
 
-        </form >
+                </form >
             </div >
-    { showProgressButton &&
-    <ProgressBar previousStep={6} />}
-<div className="button-container">
-    {showProgressButton &&
-        <ProgressButton currentAnswer={suggestion} questionID="7"
-            progressButtonName={progressButtonName} />
-    }
-</div>
+            {showProgressButton &&
+                <ProgressBar previousStep={6} />}
+            <div className="button-container">
+                {showProgressButton &&
+                    <ProgressButton currentAnswer={suggestion} questionID="7"
+                        progressButtonName={progressButtonName} />
+                }
+            </div>
         </>
     )
 }
