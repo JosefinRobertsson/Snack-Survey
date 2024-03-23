@@ -16,12 +16,10 @@ const ProgressBar = ({ previousStep }) => {
             setIsIncreasing(true);
         }
         setLatestStep(progress);
-        console.log('isIncreasing updated:');
     }, [progress, prevProgress]);
 
     const calculateDashoffset = (directionValue) => {
-        const totalLength = 274; // Total length of the stroke-dasharray
-        console.log('directionValue:', directionValue);
+        const totalLength = 284; // Total length of the stroke-dasharray
         if (isIncreasing) {
             return totalLength * (1 - directionValue / 7);
         } else {
@@ -45,9 +43,6 @@ const ProgressBar = ({ previousStep }) => {
         return null;
     }
 
-    console.log('from:', from);
-    console.log('to:', to);
-
     return (
         <div className="progress-wrapper">
             <div className="progress-container">
@@ -63,14 +58,14 @@ const ProgressBar = ({ previousStep }) => {
                                 </linearGradient>
                             </defs>
                             <circle
-                                cx="49%"
-                                cy="49%"
-                                r="44%"
+                                cx="50%"
+                                cy="50%"
+                                r="42%"
                                 transform="rotate(-90 50 50)"
                                 fill="none"
                                 stroke="url(#gradient-color)"
-                                strokeWidth="10px"
-                                strokeDasharray="274"
+                                strokeWidth="16px"
+                                strokeDasharray="284"
                                 strokeDashoffset={from} // Reverse animation if decreasing
                                 strokeLinecap="round"
                             >
