@@ -13,7 +13,7 @@ const ImportantChoice = () => {
 
     return (
         <div className="content-container">
-        <h2>Would you like to see more of any of these types of snacks at LocalMart?</h2>
+        <h2>Are any of these qualities important to you?</h2>
         <div className="important-container option-container">
         {categories.map((categoryValue) => (
             <Checkboxes 

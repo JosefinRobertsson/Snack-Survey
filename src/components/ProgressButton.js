@@ -26,8 +26,8 @@ const ProgressButton = ({ hideButton, currentAnswer, questionID, progressButtonN
 
     const playSound = () => {
         const nextButtonAudio = new Audio(nextSoundEffect);
-        nextButtonAudio.volume = 0.5;
         nextButtonAudio.play();
+        nextButtonAudio.volume = 0.1;
       }
 
 

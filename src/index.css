@@ -56,7 +56,6 @@ code {
 
 .background-image {
   position: absolute;
-  top: 20%;
   width: 900px;
   height: 900px;
   z-index: -1;
@@ -106,7 +105,6 @@ h1, h2 {
   min-height: 300px;
   width: 100%;
   padding: 0 2rem 0 2rem;
-  border: 3px solid #c02e2e;
 }
 
 .option-container {
@@ -178,6 +176,15 @@ h1, h2 {
   font-size: 0.8rem;
 }
 
+.bottom-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+}
+
 #suggestion {
   border-radius: 5px;
   margin-bottom: 4rem;
@@ -190,15 +197,14 @@ h1, h2 {
 .progress-wrapper {
   position: relative;
   width: 100%;
+  border: 2px solid plum;
 }
 
 .progress-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   position: absolute;
   top: -0.6rem;
-  right: 15%;
+  right: 5%;
+  border: 2px solid purple;
 }
 
 .progress-container::before {
@@ -212,4 +218,54 @@ h1, h2 {
   margin-bottom: 1rem;
 }
 
+
+/* media queries */
+
+@media (max-width: 900px) {
+ 
+  .background-image {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 667px) {
+
+  html {
+    font-size: 16px;
+  }
+
+  .progress-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+  }
+
+  .progress-container {
+    position: absolute;
+    top: 5rem;
+    right: 5%;
+    border: none
+  }
+
+  #dropdown {
+    font-size: 1.1rem;
+  }
+
+  .input-container {
+    margin-bottom: 6rem;
+  }
+ 
+}
 
