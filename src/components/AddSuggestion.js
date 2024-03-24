@@ -72,7 +72,7 @@ const AddSuggestion = () => {
                         {isVisible &&
                             <div className="input-inner">
                                 <label htmlFor="suggestion">Suggestion: </label>
-                                <span>
+                                <span className="suggestion-counter">
                                     <span className={suggestion.length >= 0 && suggestion.length <= 3 ? "grey-text" : ""}>{suggestion.length}</span>/50</span>
                                 <input
                                     type="text"

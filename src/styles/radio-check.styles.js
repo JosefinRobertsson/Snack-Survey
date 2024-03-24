@@ -8,7 +8,7 @@ export const Label = styled.label`
   margin: 0 5px 1rem 5px;
 
 &:focus, &:hover {
-  color: #800080;
+  color: white;
     text-shadow: 2px 2px 3px rgba(21, 43, 27, 1);
     border-radius: 15px;
     animation: shake 0.5s;
@@ -39,11 +39,10 @@ export const CheckedLabel = styled(Label)`
   animation: ${({ checked }) => (checked ? 'shake 0.5s' : 'none')};
   animation-iteration-count: infinite;
   &:active {
-    display: inline;
     color: #EE82EE;
     transition: 0.1s;
-   font-size: 1.2em;
-   margin-left: 10px;
-   margin-right: 10px;
+   font-size: 1.1em;
+   margin-left: 0;
+   margin-right: 0;
   }
 `;

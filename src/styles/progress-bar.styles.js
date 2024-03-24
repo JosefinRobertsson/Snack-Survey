@@ -36,6 +36,10 @@ export const StyledProgressBar = styled.div`
         font-family: 'Permanent Marker', cursive;
         letter-spacing: 1px;
         text-shadow: 2px 2px 3px rgba(78, 163, 101, 0.7);
-        color:  rgb(255, 0, 255, 0.7);;
+        color: #800080;
+    }
+
+    #progress-display span {
+        color:  rgb(255, 0, 255, 0.7);
     }
 `;

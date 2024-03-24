@@ -68,9 +68,6 @@ border: 2px solid black;
 h1, label, select, button {
   font-family: 'Permanent Marker', cursive;
   letter-spacing: 1px;
-}
-
-h1, label, select {
   text-shadow: 2px 2px 3px rgba(78, 163, 101, 0.7);
 }
 
@@ -117,12 +114,12 @@ h1, h2 {
   border-radius: 4px;
   margin: auto;
   margin-top: 1rem;
-  color: magenta;
+  color:  rgb(255, 0, 255, 0.7);
 }
 
 .suggestion-counter {
   font-weight: bold;
-  color: magenta;
+  color:  rgb(255, 0, 255, 0.7);
   font-size: 0.7rem;
 }
 
@@ -194,30 +191,9 @@ h1, h2 {
   padding-top: 10%;
 }
 
-
 .summary-container p:last-of-type {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-#testBtn {
-  cursor: pointer;
-border-radius: 10px;
-padding: 3px 10px;
-border: 2px solid rgb(78, 163, 101);
-margin: 10px;
-color: inherit;
-background: rgb(167,245,179);
-box-shadow: 5px 5px 9px 1px rgba(78, 163, 101, 0.9);
-}
 
-#testBtn:hover {
-  background: rgb(245, 209, 241);
-  transform: scale(1.1);
-  transition: 0.2s;
-}
-
-#testBtn:active {
-  transform: translateY(2px);
-  transform-origin: center;
-}

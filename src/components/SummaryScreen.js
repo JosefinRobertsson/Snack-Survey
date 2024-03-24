@@ -30,11 +30,16 @@ const SummaryScreen = () => {
             ];
         } else if (flavor.length > 2) {
             const flavoredItems = flavor.map((item, index) => (
-                <ResultSpan key={index}>{item}{index !== flavor.length - 1 ? ', ' : ''}</ResultSpan>
+                <ResultSpan key={index}>
+                    {item}
+                    {index !== flavor.length - 2 && index !== flavor.length - 1 ? ', ' : ''}
+                </ResultSpan>
             ));
-            flavoredItems.splice(flavoredItems.length - 1, 0, ' and ');
+            const lastIndex = flavoredItems.length - 1;
+            flavoredItems.splice(lastIndex, 0, ' and ');
             return flavoredItems;
         }
+
     }
 
     return (

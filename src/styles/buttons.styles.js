@@ -11,11 +11,15 @@ background: rgb(167,245,179);
 box-shadow: 5px 5px 9px 1px rgba(78, 163, 101, 0.9);
 
 &:focus, &:hover {
-  background: rgb(245, 209, 241);
+  color: white;
   transform: scale(1.1);
   transition: 0.2s;
   ${props => props.id === 'backBtn' && `
-    background: rgb(167,245,179);
+    background: rgb(141, 214, 153);
+  `}
+   ${props => props.id === 'nextBtn' && `
+    background: #800080;
+    text-shadow: 2px 2px 3px rgba(1, 1, 1, 0.7);
   `}
 }
 
@@ -39,8 +43,14 @@ const pulsate = keyframes`
 
 export const SubmitResultsButton = styled(BaseButton)`
   ${props => props.id === 'endBtn' && css`
-    background-color: rgb(255, 0, 255, 0.8);
+    background-color: rgb(255, 0, 255, 0.7);
     color: white;
+    text-shadow: 2px 2px 3px rgba(1, 1, 1, 0.7);
     animation: ${pulsate} 2s ease-in-out infinite;
+
+    &:focus, &:hover {
+      background-color: rgb(250, 218, 60);
+      animation:none;
+      transition: 0.3s;
   `}
 `;

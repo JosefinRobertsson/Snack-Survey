@@ -52,9 +52,9 @@ const ProgressBar = ({ previousStep }) => {
                             <defs>
                                 <linearGradient id="gradient-color"
                                     x1="0%" y1="0%" x2="0%" y2="100%">
-                                    <stop offset="30%" stopColor="#EE82EE" />
-                                    <stop offset="90%" stopColor="#800080"
-                                    />
+                                    <stop offset="0%" stopColor="#F5D1F1" />
+                                    <stop offset="50%" stopColor="#EE82EE" />
+                                    <stop offset="100%" stopColor="#800080" />
                                 </linearGradient>
                             </defs>
                             <circle
@@ -81,7 +81,7 @@ const ProgressBar = ({ previousStep }) => {
 
                         <div className="progress-inner">
                             <div id="progress-display">
-                                {progress}/7
+                                <span>{progress}</span>/7
                             </div>
                         </div>
                     </div>
