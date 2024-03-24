@@ -43,7 +43,7 @@ const SummaryScreen = () => {
     }
 
     return (
-        <>
+        <div className="content-container">
             <h1>Summary</h1>
             <div className="summary-container">
                 <p>According to your results you would like to see more <ResultSpan>{texture} {taste} {type}</ResultSpan> here at YourCornerStore.
@@ -59,7 +59,7 @@ const SummaryScreen = () => {
             <div className="button-container">
                 <EndButton questionID='8' />
             </div>
-        </>
+        </div>
     );
 }
 

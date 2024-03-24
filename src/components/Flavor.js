@@ -37,7 +37,7 @@ const Flavor = ({ data }) => {
 
 
     return (
-        <>
+        <div className="content-container">
             <h2>Choose your {headline}</h2>
             <div className="flavor-container option-container">
                 {availableFlavors.map((flavorValue) => (
@@ -63,7 +63,7 @@ const Flavor = ({ data }) => {
             <div className="button-container">
                 {showProgressButton && <ProgressButton currentAnswer={flavor} questionID='4' />}
             </div>
-        </>
+        </div>
     )
 }
 

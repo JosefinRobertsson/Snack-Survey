@@ -33,7 +33,7 @@ const Type = ({ data }) => {
         }
     };
     return (
-        <>
+        <div className="content-container">
             <h2>Which one of these do you like best?</h2>
             <div className="type-container option-container">
                 {uniqueTypes.map((typeValue) => (
@@ -58,7 +58,7 @@ const Type = ({ data }) => {
                 {showProgressButton &&
                     <ProgressButton currentAnswer={type} questionID="1" backButtonName="Start over" />}
             </div>
-        </>
+        </div>
     );
 }
 

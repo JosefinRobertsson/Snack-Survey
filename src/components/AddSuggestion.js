@@ -48,7 +48,7 @@ const AddSuggestion = () => {
 
 
     return (
-        <>
+        <div className="content-container">
             <h2>Add a suggestion</h2>
             <div className="suggestion-container option-container">
                 <form onSubmit={(event) => {
@@ -97,7 +97,7 @@ const AddSuggestion = () => {
                         progressButtonName={progressButtonName} />
                 }
             </div>
-        </>
+        </div>
     )
 }
 

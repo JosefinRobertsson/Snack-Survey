@@ -25,7 +25,7 @@ const Texture = ({ data }) => {
     };
 
     return (
-        <>
+        <div className="content-container">
             <h2>Pick a texture</h2>
             <div className="texture-container option-container">
                 {availableTextures.map((textureValue) => (
@@ -50,7 +50,7 @@ const Texture = ({ data }) => {
                 {showProgressButton && <ProgressButton currentAnswer={texture} questionID="3" />}
             </div>
 
-        </>
+        </div>
     );
 }
 

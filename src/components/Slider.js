@@ -10,7 +10,7 @@ const Slider = () => {
 
 
     return (
-        <>
+        <div className="content-container">
             <h2>How much do you spend on an average snackrun?</h2>
             <form
                 onSubmit={(event) => {
@@ -37,7 +37,7 @@ const Slider = () => {
             <div className="button-container">
                 <ProgressButton currentAnswer={price} questionID="5" />
             </div>
-        </>
+        </div>
     );
 }
 

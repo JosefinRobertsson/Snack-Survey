@@ -12,7 +12,7 @@ const ImportantChoice = () => {
     const { handleCheckboxChange, handleCheckboxKeyDown } = useCheckboxChange('6');
 
     return (
-        <>
+        <div className="content-container">
         <h2>Would you like to see more of any of these types of snacks at LocalMart?</h2>
         <div className="important-container option-container">
         {categories.map((categoryValue) => (
@@ -37,7 +37,7 @@ const ImportantChoice = () => {
         <div className="button-container">
         <ProgressButton currentAnswer={importantCategories} questionID="6" />
         </div>
-        </>
+        </div>
     );
 }
 

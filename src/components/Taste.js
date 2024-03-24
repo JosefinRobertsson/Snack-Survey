@@ -36,7 +36,7 @@ const Taste = ({ data }) => {
     };
 
     return (
-        <>
+        <div className="content-container">
             <h2>Now, pick a taste</h2>
             <div className="taste-container option-container">
                 {availableTastes.map((tasteValue) => (
@@ -60,7 +60,7 @@ const Taste = ({ data }) => {
             <div className="button-container">
                 {showProgressButton && <ProgressButton currentAnswer={taste} questionID="2" />}
             </div>
-        </>
+        </div>
     );
 }
 

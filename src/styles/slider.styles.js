@@ -10,6 +10,7 @@ export const PriceSlider = styled.input`
     -webkit-transition: .2s;
     transition: opacity .2s;
     border-radius: 5px;
+    box-shadow: 5px 5px 9px 1px rgba(78, 163, 101, 0.9);
 
     &:hover,
     &:focus {
@@ -56,4 +57,5 @@ export const PriceSlider = styled.input`
 export const RangeUpdate = styled.p`
     font-family: 'Permanent Marker', cursive;
     color:inherit;
+    text-shadow: 2px 2px 3px rgba(78, 163, 101, 0.7);
 `;
