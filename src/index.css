@@ -198,14 +198,12 @@ h1, h2 {
 .progress-wrapper {
   position: relative;
   width: 100%;
-  border: 2px solid plum;
 }
 
 .progress-container {
   position: absolute;
   top: -0.6rem;
   right: 5%;
-  border: 2px solid purple;
 }
 
 .progress-container::before {
