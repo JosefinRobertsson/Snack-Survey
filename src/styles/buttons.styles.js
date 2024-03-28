@@ -49,7 +49,7 @@ export const SubmitResultsButton = styled(BaseButton)`
     animation: ${pulsate} 2s ease-in-out infinite;
 
     &:focus, &:hover {
-      background-color: rgb(250, 218, 60);
+      background-color: rgb(128, 0, 128);
       animation:none;
       transition: 0.3s;
   `}
