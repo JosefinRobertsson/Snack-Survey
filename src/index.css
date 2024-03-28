@@ -59,16 +59,23 @@ code {
   position: absolute;
   width: 900px;
   height: 900px;
+  border-radius: 15px;
   z-index: -1;
   rotate: 180deg;
   background-color: #ccc;
-border: 2px solid black;
+  -webkit-box-shadow: 0px -18px 65px 5px rgba(128,0,128,0.27);
+  -moz-box-shadow: 0px -18px 65px 5px rgba(128,0,128,0.27);
+  box-shadow: 0px -18px 65px 5px rgba(128,0,128,0.27);
+}
+
+.background-image img {
+  border-radius: 15px;
 }
 
 h1, label, select, button {
   font-family: 'Permanent Marker', cursive;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 3px rgba(78, 163, 101, 0.7);
+  text-shadow: 2px 2px 3px rgba(78, 162, 100, 0.702);
 }
 
 p, h2, h3 {
