@@ -33,6 +33,7 @@ img, picture, video, canvas, svg {
 
 input {
   font: inherit;
+  font-size: 16px;
   display: block;
   margin: auto;
   margin-bottom: 1rem;
