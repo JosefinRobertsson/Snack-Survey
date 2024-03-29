@@ -6,13 +6,19 @@ export const Label = styled.label`
   transition: 0.3s;
   padding: 0px 10px 5px 5px;
   margin: 0 5px 1rem 5px;
+  border-radius: 15px;
 
+  
 &:focus, &:hover {
   color: white;
-    text-shadow: 2px 2px 3px rgba(21, 43, 27, 1);
-    border-radius: 15px;
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
+    text-shadow:  
+    0 0 10px rgba(141, 214, 153, 0.95),
+      0 0 20px rgba(141, 214, 153, 0.8),
+      0 0 30px rgba(141, 214, 153, 0.6),
+      0 0 40px rgba(141, 214, 153, 0.4),
+      0 0 50px rgba(141, 214, 153, 0.2);
+} 
+
     
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -27,22 +33,35 @@ export const Label = styled.label`
   90% { transform: translate(1px, 0px) rotate(0deg); }
   100% { transform: translate(1px, 0px) rotate(-1deg); }
 }
-}
 `;
 
 
 export const CheckedLabel = styled(Label)`
+
   color: ${({ checked }) => (checked ? 'white' : 'inherit')};
-  background-color: ${({ checked }) => (checked ? 'rgb(245, 184, 231)' : 'inherit')};
-  border-radius: 15px;
-  text-shadow: ${({ checked }) => (checked ? '2px 2px 3px rgba(21, 43, 27, 1)' : 'inherit')}; 
+  background: ${({ checked }) =>
+  checked
+    ? `transparent` : 'inherit'};
+    text-shadow: ${({ checked }) =>
+  checked
+    ? `
+      0 0 10px rgba(128, 0, 128, 0.95),
+      0 0 20px rgba(128, 0, 128, 0.8),
+      0 0 30px rgba(128, 0, 128, 0.6),
+      0 0 40px rgba(148, 0, 148, 0.4),
+      0 0 50px rgba(148, 0, 148, 0.2)
+    `
+    : 'none'};
   animation: ${({ checked }) => (checked ? 'shake 0.5s' : 'none')};
   animation-iteration-count: infinite;
   &:active {
-    color: #EE82EE;
-    transition: 0.1s;
-   font-size: 1.1em;
-   margin-left: 0;
-   margin-right: 0;
+   color: inherit;
+    transition: 0.2s;
+    text-shadow: 
+      0 0 10px rgba(141, 214, 153, 0.95),
+      0 0 20px rgba(141, 214, 153, 0.8),
+      0 0 30px rgba(141, 214, 153, 0.6),
+      0 0 40px rgba(141, 214, 153, 0.4),
+      0 0 50px rgba(141, 214, 153, 0.2);
   }
 `;

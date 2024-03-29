@@ -20,7 +20,7 @@ const Radiobuttons = ({ label, id, children, handleKeyDown, ...delegated }) => {
                 checked={delegated.checked}
                 tabIndex={0}
                 onKeyDown={handleKeyDown}
-                className="radio-label">
+                >
                 {children}
             </CheckedLabel>
         </form>
