@@ -20,7 +20,7 @@ const ThankYouScreen = () => {
         </div>
          <div className="button-container lastpage-container">
          <RetakeSurveyButton id="lastrestartBtn" onClick={() => handleRestartClick()}>Retake survey</RetakeSurveyButton>
-         <a id="snacks-link" href={`https://www.google.com/search?q=${taste}+${texture}+${type}+snacks`} target="_blank" rel="noopener noreferrer">Go look at snacks</a>
+         <a id="snacks-link" href={`https://www.google.com/search?q=${taste}+${texture}+${type}+snacks`} target="_blank" rel="noopener noreferrer">Show me snacks!</a>
          </div>
             </>
     );

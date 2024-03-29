@@ -96,11 +96,11 @@ h1, h2 {
   font-size: 120%;
 }
 
-#start-quote {
+.store-quote {
   padding-top: 10px;
   padding-right: 2rem;
   margin-left: auto;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .content-container {
@@ -122,6 +122,14 @@ h1, h2 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+
+.thankyou-container {
+  color: rgba(128,0,128);
+}
+
+.thankyou-container h1 {
+  text-shadow: 2px 2px 3px rgba(128, 0, 128, 0.7);
 }
 
 .radio-input,
@@ -155,6 +163,10 @@ h1, h2 {
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
+}
+
+.lastpage-container {
+  margin-bottom: 0;
 }
 
 .option-inner {
@@ -225,6 +237,14 @@ h1, h2 {
   margin-bottom: 1rem;
 }
 
+#snacks-link {
+  display:block;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-style: normal;
+  color: rgba(128,0,128);
+  text-decoration: none;
+}
 
 /* media queries */
 

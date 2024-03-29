@@ -9,12 +9,13 @@ margin: 10px;
 color: inherit;
 background: rgb(167,245,179);
 box-shadow: 5px 5px 9px 1px rgba(78, 163, 101, 0.9);
+transition: 0.2s ease-in-out;
 
 &:focus, &:hover {
   color: white;
   transform: scale(1.1);
-  transition: 0.2s;
-  ${props => props.id === 'backBtn' && `
+  
+  ${props => props.id === ('backBtn' || 'lastrestartBtn') && `
     background: rgb(141, 214, 153);
   `}
    ${props => props.id === 'nextBtn' && `
@@ -24,7 +25,7 @@ box-shadow: 5px 5px 9px 1px rgba(78, 163, 101, 0.9);
 }
 
 &:active {
-  transition: 0.1s;
+  transition: 0.1s ease-in-out;
   transform: translateY(1px);
 }
 `;
@@ -50,7 +51,16 @@ export const SubmitResultsButton = styled(BaseButton)`
 
     &:focus, &:hover {
       background-color: rgb(128, 0, 128);
-      animation:none;
+      animation: none;
       transition: 0.3s;
   `}
 `;
+
+export const RetakeSurveyButton = styled(BaseButton)`
+  ${props =>
+    props.id === 'lastrestartBtn' &&
+    css`
+      box-shadow: 5px 5px 9px 1px rgba(128, 0, 128, 0.6);
+    `}
+`;
+
