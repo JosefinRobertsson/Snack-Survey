@@ -19,7 +19,9 @@ const ThankYouScreen = () => {
             <p>Your answers have been submitted. We appreciate your time and feedback and hope to see you soon!</p> <p className="store-quote">YourCornerStore - your 24/7 friend in snacking</p>
         </div>
          <div className="button-container lastpage-container">
+         <span>
          <RetakeSurveyButton id="lastrestartBtn" onClick={() => handleRestartClick()}>Retake survey</RetakeSurveyButton>
+         </span>
          <a id="snacks-link" href={`https://www.google.com/search?q=${taste}+${texture}+${type}+snacks`} target="_blank" rel="noopener noreferrer">Show me snacks!</a>
          </div>
             </>

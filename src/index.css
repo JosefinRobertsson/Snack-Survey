@@ -236,14 +236,18 @@ h1, h2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.lastpage-container span {
+  display: block;
+}
 
-#snacks-link {
-  display:block;
+#snacks-link {  
+  display: inline-block;
   margin-top: 1rem;
   font-size: 0.8rem;
   font-style: normal;
-  color: rgba(128,0,128);
+  color: rgba(128, 0, 128);
   text-decoration: none;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 /* media queries */
@@ -295,4 +299,19 @@ h1, h2 {
   }
  
 }
+
+/* animations */
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
 
