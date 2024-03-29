@@ -31,6 +31,8 @@ const handleBackClick = () => {
             suggestion: suggestion
         }
         setFormData(newFormData);
+        resetAnswers(questionID);
+        setProgress(9);
     }  
     
     React.useEffect(() => {
