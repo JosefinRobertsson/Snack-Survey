@@ -8,7 +8,6 @@ import ProgressBar from './ProgressBar';
 const Slider = () => {
     const { price, setPrice } = React.useContext(PriceContext);
 
-
     return (
         <div className="content-container">
             <h2>How much do you spend on an average snackrun?</h2>
@@ -22,7 +21,8 @@ const Slider = () => {
                 </label>
                 <PriceSlider
                     type="range"
-                    min={1} max={20}
+                    min={1}
+                    max={20}
                     value={price}
                     id="price-slider"
                     className="slider"
@@ -32,7 +32,7 @@ const Slider = () => {
                     }}
                 />
             </form>
-            <RangeUpdate>€ {price}</RangeUpdate>
+            <RangeUpdate>€ {price  >= 20 ? `${price}+` : price}</RangeUpdate>
             <ProgressBar previousStep={4} />
             <div className="button-container">
                 <ProgressButton currentAnswer={price} questionID="5" />
