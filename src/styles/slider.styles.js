@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const PriceSlider = styled.input`
     -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 5px;
     background: #fa9cfa;
