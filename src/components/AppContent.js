@@ -10,14 +10,28 @@ import Slider from './Slider';
 import ImportantChoice from './ImportantChoice';
 import AddSuggestion from './AddSuggestion';
 import SummaryScreen from './SummaryScreen';
+import greenBackground from '../images/green.png';
+import magentaBackground from '../images/magenta1.png';
 
-// 0 start, 1 type, 2 taste, 3 texture, 4 flavor (checkbox), 5 price (slider), 6 options, 7 textinput, summary
+
+// 0 start, 1 type, 2 taste, 3 texture, 4 flavor (checkbox), 5 price (slider), 6 options, 7 textinput, 8 summary, 9 thankyou
 
 export const AppContent = () => {
   const { progress } = React.useContext(ProgressContext);
+  const [imgSource, setImgSource] = React.useState(greenBackground);
+
+  React.useEffect(() => {
+    if (progress === 9) {
+      setImgSource(magentaBackground);
+    } 
+  }, [progress]);
 
   return (
-    <>
+    <div className="all-wrapper">
+    <div className="background-image">
+      <img src={imgSource}
+        alt="background" />
+    </div>
       {progress === 0 &&
         <StartScreen />}
       {progress === 1 &&
@@ -40,7 +54,7 @@ export const AppContent = () => {
         <AddSuggestion />}
       {progress === 8 &&
         <SummaryScreen />}
-    </>
+                  </div>
   );
 };
 
