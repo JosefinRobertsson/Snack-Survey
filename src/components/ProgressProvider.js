@@ -9,7 +9,7 @@ const ProgressProvider = ({ children }) => {
     const [showProgressButton, setShowProgressButton] = React.useState(false);
 
     return (
-        <ProgressContext.Provider value={{ progress, setProgress, prevProgress, setPrevProgress, showProgressBar, setShowProgressBar, showProgressButton, setShowProgressButton,  }}>
+        <ProgressContext.Provider value={{ progress, setProgress, prevProgress, setPrevProgress, showProgressBar, setShowProgressBar, showProgressButton, setShowProgressButton  }}>
             {children}
         </ProgressContext.Provider>
     );

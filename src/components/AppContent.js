@@ -10,6 +10,7 @@ import Slider from './Slider';
 import ImportantChoice from './ImportantChoice';
 import AddSuggestion from './AddSuggestion';
 import SummaryScreen from './SummaryScreen';
+import ThankYouScreen from './ThankYouScreen';
 import greenBackground from '../images/green.png';
 import magentaBackground from '../images/magenta1.png';
 
@@ -21,9 +22,11 @@ export const AppContent = () => {
   const [imgSource, setImgSource] = React.useState(greenBackground);
 
   React.useEffect(() => {
-    if (progress === 9) {
+    if (progress >= 9) {
       setImgSource(magentaBackground);
-    } 
+    }  else {
+      setImgSource(greenBackground);
+    }
   }, [progress]);
 
   return (
@@ -54,6 +57,8 @@ export const AppContent = () => {
         <AddSuggestion />}
       {progress === 8 &&
         <SummaryScreen />}
+        {progress === 9 &&
+        <ThankYouScreen />}
                   </div>
   );
 };
