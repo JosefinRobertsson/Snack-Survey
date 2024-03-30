@@ -8,7 +8,7 @@ border: none;
 margin: 10px;
 color: inherit;
 background: rgb(167,245,179);
-box-shadow: 5px 5px 9px 1px rgba(78, 163, 101, 0.9);
+box-shadow: 5px 5px 9px 1px rgba(78, 163, 101, 0.6);
 transition: 0.2s ease-in-out;
 
 &:focus, &:hover {
@@ -60,7 +60,7 @@ export const RetakeSurveyButton = styled(BaseButton)`
   ${props =>
     props.id === 'lastrestartBtn' &&
     css`
-      box-shadow: 5px 5px 9px 1px rgba(128, 0, 128, 0.6);
+      box-shadow: 5px 5px 9px 1px rgba(128, 0, 128, 0.3);
     `}
 `;
 
