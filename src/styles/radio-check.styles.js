@@ -12,11 +12,11 @@ export const Label = styled.label`
 &:focus, &:hover {
   color: white;
     text-shadow:  
-    0 0 10px rgba(141, 214, 153, 0.95),
-      0 0 20px rgba(141, 214, 153, 0.8),
-      0 0 30px rgba(141, 214, 153, 0.6),
-      0 0 40px rgba(141, 214, 153, 0.4),
-      0 0 50px rgba(141, 214, 153, 0.2);
+    0 0 10px rgba(128, 0, 128, 0.95),
+      0 0 20px rgba(128, 0, 128, 0.8),
+      0 0 30px rgba(128, 0, 128, 0.6),
+      0 0 40px rgba(148, 0, 148, 0.4),
+      0 0 50px rgba(148, 0, 148, 0.2)
 } 
 
     
@@ -55,7 +55,7 @@ export const CheckedLabel = styled(Label)`
   animation: ${({ checked }) => (checked ? 'shake 0.5s' : 'none')};
   animation-iteration-count: infinite;
   &:active {
-   color: inherit;
+   color: white;
     transition: 0.2s;
     text-shadow: 
       0 0 10px rgba(141, 214, 153, 0.95),
