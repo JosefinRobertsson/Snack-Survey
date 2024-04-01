@@ -11,15 +11,15 @@ const AnimatedCandy = () => {
 
     return (
         <>
-        <AnimatedCandyContainer>
-            <img src={lollipopImg} alt="lollipop" />
+            <AnimatedCandyContainer>
+                <img src={lollipopImg} alt="lollipop" />
             </AnimatedCandyContainer>
-        <AnimatedCandyContainer2>
-        <img src={gummyImg} alt="gummy bears" />
-        </AnimatedCandyContainer2>
-        <AnimatedCandyContainer3>
-        <img src={chipsImg} alt="chips" />
-        </AnimatedCandyContainer3>
+            <AnimatedCandyContainer2>
+                <img src={gummyImg} alt="gummy bears" />
+            </AnimatedCandyContainer2>
+            <AnimatedCandyContainer3>
+                <img src={chipsImg} alt="chips" />
+            </AnimatedCandyContainer3>
         </>
     )
 

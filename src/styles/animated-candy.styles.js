@@ -44,6 +44,9 @@ const slowDriftDown = keyframes`
   0% {
     transform: translateY(0vh) translateX(-25%) rotate(-10deg);
   }
+  1% {
+    transform: translateY(1vh) translateX(-25%) rotate(-10deg);
+  }
   5% {
     transform: translateY(5vh) translateX(0%) rotate(0deg);
   }
@@ -115,10 +118,9 @@ export const AnimatedCandyContainer = styled.div`
     position: fixed;
     top: 0;
     left: 40%;
-    overflow: hidden;
     z-index: 10;
     width: 50px;
-    height: 50px;
+    aspect-ratio: 1/1;
     filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5)) brightness(120%);
     animation: ${rotateAndDrift} 15s linear infinite;
     backface-visibility: hidden;
@@ -154,5 +156,4 @@ animation: ${rotateAndDriftReverse} 13s linear infinite;
         left: 75%;
     }
 `;
-
 

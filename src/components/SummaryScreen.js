@@ -46,7 +46,7 @@ const SummaryScreen = () => {
         <div className="content-container">
             <h1>Summary</h1>
             <div className="summary-container">
-                <p>According to your results you would like to see more <ResultSpan>{taste} {texture} {type}</ResultSpan>here at YourCornerStore.
+                <p>According to your results you would like to see more <ResultSpan>{taste} {texture} {type}</ResultSpan> here at YourCornerStore.
                     Perhaps some <ResultSpan>{randomizedSnack()}</ResultSpan>?</p>
 
                 <p>You spend an average of <ResultSpan>€{price  >= 20 ? `${price}+` : price}</ResultSpan> on a snack purchase{!suggestion && importantCategories.length === 0 ? '.' : ','}
