@@ -47,13 +47,26 @@ export const PriceSlider = styled.input`
     }
 
     &::-moz-range-thumb {
-        width: 25px;
-        height: 25px;
-        background: #4CAF50;
+        width: 20px;
+        height: 20px;
+        clip-path: circle();
+        background: rgb(249,210,249);
+        background: radial-gradient(circle, rgba(249,210,249,1) 2%, rgba(250,156,250,1) 23%, rgba(189,63,189,1) 69%, rgba(128,0,128,1) 100%);
         cursor: pointer;
         transition: width 0.2s, height 0.2s;
+
+        &:hover {
+            width: 25px;
+            height: 25px;
+        }
+
+        &:active { 
+            width: 15px; 
+            height: 20px;
+        }
     }
 `;
+
 
 export const RangeUpdate = styled.p`
     font-family: 'Permanent Marker', cursive;
