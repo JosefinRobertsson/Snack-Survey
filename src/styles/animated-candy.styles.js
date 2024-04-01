@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 const rotateAndDrift = keyframes`
   0% {
-    transform: translateY(0vh) translateX(-25%) rotate(0deg);
+    transform: translateY(-100%) translateX(-25%) rotate(0deg);
   }
   25% {
     transform: translateY(25vh) translateX(25%) rotate(180deg);
@@ -42,7 +42,7 @@ const rotateAndDriftReverse = keyframes`
 
 const slowDriftDown = keyframes`
   0% {
-    transform: translateY(0vh) translateX(-25%) rotate(-10deg);
+    transform: translateY(-100%) translateX(-25%) rotate(-10deg);
   }
   1% {
     transform: translateY(1vh) translateX(-25%) rotate(-10deg);
