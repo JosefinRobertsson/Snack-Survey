@@ -12,7 +12,7 @@ const AnimatedCandy = () => {
     return (
         <>
         <AnimatedCandyContainer>
-            <img src={lollipopImg} alt="lollipop" /> 
+            <img src={lollipopImg} alt="lollipop" />
             </AnimatedCandyContainer>
         <AnimatedCandyContainer2>
         <img src={gummyImg} alt="gummy bears" />

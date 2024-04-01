@@ -28,7 +28,7 @@ const ThankYouScreen = () => {
          </div>
          </div>
          <footer>
-            <p>snack icons from <a href="https://smashicons.com/">smashicons</a>, <a href="https://www.freepik.com">freepik</a></p>
+            <p>snack icons from <a href="https://smashicons.com/" target="_blank" rel="noopener noreferrer">smashicons</a>, <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">freepik</a></p>
             </footer>
             </>
     );
