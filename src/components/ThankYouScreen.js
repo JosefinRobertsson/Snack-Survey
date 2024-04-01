@@ -27,6 +27,9 @@ const ThankYouScreen = () => {
          <a id="snacks-link" href={`https://www.google.com/search?q=${taste}+${texture}+${type}+snacks`} target="_blank" rel="noopener noreferrer">Show me snacks!</a>
          </div>
          </div>
+         <footer>
+            <p>snack icons from <a href="https://smashicons.com/">smashicons</a>, <a href="https://www.freepik.com">freepik</a></p>
+            </footer>
             </>
     );
 }
