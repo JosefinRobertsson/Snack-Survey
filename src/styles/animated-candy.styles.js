@@ -83,20 +83,26 @@ export const AnimatedCandyContainer = styled.div`
     transform: translateX(-50%);
     animation: ${driftDown} 15s linear infinite;
     backface-visibility: hidden;
+
+    @media screen and (max-width: 1100px) {
+        left: 15%;
+    }
     `;
 
 export const AnimatedCandyContainer2 = styled(AnimatedCandyContainer)`
 left: 45%;
 animation: ${driftDown} 19s linear infinite;
+
+@media screen and (max-width: 100px) {
+        left: 45%;
+    }
 `;
 
 export const AnimatedCandyContainer3 = styled(AnimatedCandyContainer)`
 left: 60%;
 animation: ${driftDown} 13s linear infinite;
-`;
 
-export const ContainerWrapper = styled.div`
-    position: relative; /* Ensure the containers are positioned relative to this container */
-    width: 100%; /* Adjust the width as needed */
-    height: 100vh; /* Adjust the height as needed */
+@media screen and (max-width: 1100px) {
+        left: 75%;
+    }
 `;
