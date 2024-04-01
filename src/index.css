@@ -295,10 +295,24 @@ h2 {
   display: inline-block;
   margin-top: 1rem;
   font-size: 0.8rem;
-  font-style: normal;
+  font-style: italic;
   color: rgba(128, 0, 128);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   text-decoration: none;
   animation: pulse 2s ease-in-out infinite;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height:5rem;
+  font-size: 0.8rem;
+  color: rgba(128, 0, 128);
+}
+
+footer a {
+  color: rgba(128, 0, 128);
 }
 
 /* media queries */
@@ -363,7 +377,7 @@ h2 {
   }
 
   50% {
-    transform: scale(1);
+    transform: scale(1.05);
   }
 
   100% {
