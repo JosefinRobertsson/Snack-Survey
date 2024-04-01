@@ -13,6 +13,7 @@ import SummaryScreen from './SummaryScreen';
 import ThankYouScreen from './ThankYouScreen';
 import greenBackground from '../images/green.png';
 import magentaBackground from '../images/magenta1.png';
+import AnimatedCandy from './AnimatedCandy';
 
 
 // 0 start, 1 type, 2 taste, 3 texture, 4 flavor (checkbox), 5 price (slider), 6 options, 7 textinput, 8 summary, 9 thankyou
@@ -31,6 +32,7 @@ export const AppContent = () => {
 
   return (
     <div className="all-wrapper">
+      <AnimatedCandy />
     <div className="background-image">
       <img src={imgSource}
         alt="background" />
