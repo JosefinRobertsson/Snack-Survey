@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 const driftDown = keyframes`
   0% {
-    transform: translateY(-100%) translateX(0%);
+    transform: translateY(-100%) translateX(-12%);
   }
   5% {
     transform: translateY(5vh) translateX(25%);
@@ -76,14 +76,15 @@ export const AnimatedCandyContainer = styled.div`
     left: 40%;
     overflow: hidden;
     z-index: 10;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #f6d258;
-    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
     animation: ${driftDown} 15s linear infinite;
     backface-visibility: hidden;
 
+    @media screen and (max-width: 2300px) {
+        left: 32%;
+    }
     @media screen and (max-width: 1100px) {
         left: 15%;
     }
@@ -93,16 +94,24 @@ export const AnimatedCandyContainer2 = styled(AnimatedCandyContainer)`
 left: 45%;
 animation: ${driftDown} 19s linear infinite;
 
+@media screen and (max-width: 2300px) {
+        left: 40%;
+    }
 @media screen and (max-width: 100px) {
         left: 45%;
     }
 `;
 
 export const AnimatedCandyContainer3 = styled(AnimatedCandyContainer)`
-left: 60%;
+left: 55%;
 animation: ${driftDown} 13s linear infinite;
 
+@media screen and (max-width: 2300px) {
+        left: 66%;
+    }
 @media screen and (max-width: 1100px) {
         left: 75%;
     }
 `;
+
+
