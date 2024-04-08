@@ -9,7 +9,9 @@ import { BaseButton, SubmitResultsButton } from '../styles/buttons.styles';
 
 const EndButton = (questionID) => {
     const { setProgress } = React.useContext(ProgressContext);
-    const [formData, setFormData] = React.useState({});
+    // formData is an object with the gathered data that would be sent to wherever the survey results are handled if it were a real survey
+    // eslint-disable-next-line no-unused-vars
+    const [formData, setFormData] = React.useState({ type: '', taste: '', texture: '', flavor: [], price: '', importantCategories: [], suggestion: ''});
     const { type, taste, texture } = React.useContext(TypeTasteTextureContext);
     const { flavor, importantCategories } = React.useContext(CheckboxChoiceContext);
     const { price } = React.useContext(PriceContext);
@@ -35,10 +37,6 @@ const handleBackClick = () => {
         setProgress(9);
     }  
     
-    React.useEffect(() => {
-        console.log('formData:', formData);
-    }, [formData]);
-
     return (
         <>
          <BaseButton id="restartBtn"
