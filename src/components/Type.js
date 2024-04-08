@@ -10,7 +10,6 @@ const Type = ({ data }) => {
     const { type, setType } = React.useContext(TypeTasteTextureContext);
     //use Set to store unique values
     const uniqueTypes = [...new Set(data.map((snack) => snack.type))];
-    console.log('uniqueTypes:', uniqueTypes);
 
     //This check is nececcary since the user can go back to previous questions and change their answers. We want to show the progress button only when there is a valid answer
     React.useEffect(() => {

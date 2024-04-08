@@ -9,15 +9,14 @@ const Taste = ({ data }) => {
     const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
     const { type, taste, setTaste } = React.useContext(TypeTasteTextureContext);
     const availableTastes = [...new Set(data.filter((snack) => snack.type === type).map((snack) => snack.taste))];
-    console.log('availableTastes:', availableTastes);
-    
+
 
     React.useEffect(() => {
         if (taste === '') {
             setShowProgressButton(false);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);   
+    }, []);
 
     //arrow function chaining ("currying") defines a function that takes selectedTaste as a parameter and returns another function that takes an event as a parameter
     const handleKeyDown = (selectedTaste) => (e) => {
@@ -47,8 +46,8 @@ const Taste = ({ data }) => {
                     </Radiobuttons>
                 ))}
             </div>
-            
-                    <ProgressBar previousStep={1} />
+
+            <ProgressBar previousStep={1} />
             <div className="button-container">
                 {showProgressButton && <ProgressButton currentAnswer={taste} questionID="2" />}
             </div>

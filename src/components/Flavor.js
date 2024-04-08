@@ -32,9 +32,7 @@ const Flavor = ({ data }) => {
 
     }, [flavor, setShowProgressButton, availableFlavors.length]);
 
-    console.log('availableFlavors:', availableFlavors.length);
     const { handleCheckboxChange, handleCheckboxKeyDown } = useCheckboxChange('4');
-
 
     return (
         <div className="content-container">
@@ -58,7 +56,7 @@ const Flavor = ({ data }) => {
                     </Checkboxes>
                 ))}
             </div>
-                    <ProgressBar previousStep={3} />
+            <ProgressBar previousStep={3} />
             <div className="button-container">
                 {showProgressButton && <ProgressButton currentAnswer={flavor} questionID='4' />}
             </div>

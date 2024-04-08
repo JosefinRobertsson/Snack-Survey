@@ -39,7 +39,6 @@ const SummaryScreen = () => {
             flavoredItems.splice(lastIndex, 0, ' and ');
             return flavoredItems;
         }
-
     }
 
     return (
