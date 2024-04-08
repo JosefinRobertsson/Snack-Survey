@@ -10,8 +10,6 @@ body {
   color: #204229;
   min-height: 100vh;
   line-height: calc(1em + 0.5rem);
-  /*improves text readability on MacOS which still uses subpixel antialiasing. No effect on Windows, Linux, mobile*/
-  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -67,7 +65,6 @@ code {
   height: 900px;
   border-radius: 15px;
   z-index: -1;
-  background-color: #ccc;
   -webkit-box-shadow: 0px -18px 65px 5px rgba(128, 0, 128, 0.27);
   -moz-box-shadow: 0px -18px 65px 5px rgba(128, 0, 128, 0.27);
   box-shadow: 0px -18px 65px 5px rgba(128, 0, 128, 0.27);
@@ -335,7 +332,7 @@ footer a {
 @media (max-width: 667px) {
 
   html {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .progress-wrapper {

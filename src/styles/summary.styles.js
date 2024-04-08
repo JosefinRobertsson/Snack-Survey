@@ -13,7 +13,7 @@ export const ResultSpan = styled.span`
   font-family: 'Permanent Marker', cursive;
   color: magenta;
   opacity: 0.7; 
-  padding-right: 6px;
+  padding-right: 5px;
   transition: 0.2s ease-in-out;
   animation: ${glow} 1s infinite alternate;
 

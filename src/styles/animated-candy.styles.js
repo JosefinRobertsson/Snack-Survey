@@ -44,9 +44,6 @@ const slowDriftDown = keyframes`
   0% {
     transform: translateY(-100%) translateX(-25%) rotate(-10deg);
   }
-  1% {
-    transform: translateY(1vh) translateX(-25%) rotate(-10deg);
-  }
   5% {
     transform: translateY(5vh) translateX(0%) rotate(0deg);
   }
