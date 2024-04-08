@@ -1,5 +1,5 @@
 
-export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories, setSuggestion, setDropdown, setShowProgressBar) => {
+export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavor, setPrice, setImportantCategories, setSuggestion, setDropdown) => {
 
     switch (questionID) {
         case '0':
@@ -11,7 +11,6 @@ export const resetAnswers = (questionID, setType, setTaste, setTexture, setFlavo
             setImportantCategories([]);
             setSuggestion('');
             setDropdown('empty');
-            setShowProgressBar(false);
             break;
         case '1':
             setTaste('');

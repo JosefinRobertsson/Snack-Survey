@@ -44,8 +44,8 @@ const Texture = ({ data }) => {
                     </Radiobuttons>
                 ))}
             </div>
-            {showProgressButton &&
-                    <ProgressBar previousStep={2} />}
+
+                    <ProgressBar previousStep={2} />
             <div className="button-container">
                 {showProgressButton && <ProgressButton currentAnswer={texture} questionID="3" />}
             </div>

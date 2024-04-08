@@ -6,7 +6,7 @@ import ProgressButton from './ProgressButton';
 import ProgressBar from "./ProgressBar";
 
 const Type = ({ data }) => {
-    const { showProgressBar, setShowProgressBar, showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
+    const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
     const { type, setType } = React.useContext(TypeTasteTextureContext);
     //use Set to store unique values
     const uniqueTypes = [...new Set(data.map((snack) => snack.type))];
@@ -19,12 +19,6 @@ const Type = ({ data }) => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
-    React.useEffect(() => {
-        if (type !== '' && showProgressButton) {
-            setShowProgressBar(true);
-        }
-    }, [type, showProgressButton, setShowProgressBar]);
 
     const handleKeyDown = (selectedType) => (e) => {
         if (e.key === 'Enter') {
@@ -53,8 +47,7 @@ const Type = ({ data }) => {
                 ))}
             </div>
           
-            {showProgressBar &&
-                    <ProgressBar previousStep={0} />}
+                    <ProgressBar previousStep={0} />
             <div className="button-container">
                 {showProgressButton &&
                     <ProgressButton currentAnswer={type} questionID="1" backButtonName="Start over" />}
