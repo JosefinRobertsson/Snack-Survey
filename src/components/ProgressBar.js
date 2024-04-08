@@ -81,7 +81,8 @@ const ProgressBar = ({ previousStep }) => {
 
                         <div className="progress-inner">
                             <div id="progress-display">
-                                <span>{progress}</span>/7
+                                <span tabIndex={0}      
+                                 aria-label={`Question ${progress} out of 7`}>{progress}</span>/7
                             </div>
                         </div>
                     </div>
