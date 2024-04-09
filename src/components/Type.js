@@ -5,13 +5,14 @@ import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import ProgressButton from './ProgressButton';
 import ProgressBar from "./ProgressBar";
 
+
 const Type = ({ data }) => {
     const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
     const { type, setType } = React.useContext(TypeTasteTextureContext);
     //use Set to store unique values
     const uniqueTypes = [...new Set(data.map((snack) => snack.type))];
 
-    //This check is nececcary since the user can go back to previous questions and change their answers. We want to show the progress button only when there is a valid answer
+    //This check is necessary since the user can go back to previous questions and change their answers. We want to show the progress button only when there is a valid answer
     React.useEffect(() => {
         if (type === '') {
             setShowProgressButton(false);
@@ -27,7 +28,7 @@ const Type = ({ data }) => {
     };
     return (
         <div className="content-container">
-            <h2>Which one of these do you like best?</h2>
+               <h2>Which one of these do you like best?</h2>
             <div className="type-container option-container">
                 {uniqueTypes.map((typeValue) => (
                     <Radiobuttons
@@ -39,20 +40,20 @@ const Type = ({ data }) => {
                         onChange={(event) => {
                             setType(event.target.value);
                             setShowProgressButton(true);
-                        }}
+                        } }
                         handleKeyDown={handleKeyDown(typeValue)}>
                         {typeValue}
                     </Radiobuttons>
                 ))}
             </div>
-          
-                    <ProgressBar previousStep={0} />
+
+            <ProgressBar previousStep={0} />
             <div className="button-container">
                 {showProgressButton &&
                     <ProgressButton currentAnswer={type} questionID="1" backButtonName="Start over" />}
             </div>
-           
         </div>
+        
     );
 }
 

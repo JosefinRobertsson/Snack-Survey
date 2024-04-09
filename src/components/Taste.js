@@ -10,7 +10,7 @@ const Taste = ({ data }) => {
     const { type, taste, setTaste } = React.useContext(TypeTasteTextureContext);
     const availableTastes = [...new Set(data.filter((snack) => snack.type === type).map((snack) => snack.taste))];
 
-
+    
     React.useEffect(() => {
         if (taste === '') {
             setShowProgressButton(false);
