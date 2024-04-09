@@ -1,7 +1,7 @@
 import React from "react";
 import { CheckedLabel } from "../styles/radio-check.styles";
 
-const Radiobuttons = ({ label, id, children, handleKeyDown, ...delegated }) => {
+const Radiobuttons = ({ name, id, children, handleKeyDown, ...delegated }) => {
 
     return (
         <form
@@ -11,6 +11,7 @@ const Radiobuttons = ({ label, id, children, handleKeyDown, ...delegated }) => {
             <input
                 type="radio"
                 tabIndex={-1} //make sure the button isn't targeted when tabbing
+                name={name}
                 id={id}
                 className="radio-input"
                 {...delegated}
