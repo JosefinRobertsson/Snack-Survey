@@ -23,12 +23,12 @@ const Slider = () => {
                     type="range"
                     min={1}
                     max={20}
+                    step="1"
                     value={price}
                     id="price-slider"
                     className="slider"
-                    tabIndex="0"
                     onChange={event => {
-                        setPrice(event.target.value);
+                        setPrice(Number(event.target.value));
                     }}
                 />
             </form>
