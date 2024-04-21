@@ -390,6 +390,89 @@ export const snackbase = [
       type: 'nuts',
       texture: 'crunchy',
       flavor: ['almond', 'peanut', 'garlic']
+    },
+    {
+      name: 'ChickpeaCrispies',
+      taste: 'sweet',
+      type: 'chips',
+      texture: 'crispy',
+      flavor: 'vanilla'
+    },
+    {
+      name: 'Hi-Chew Sweet & Sour',
+      taste: 'sour',
+      type: 'candy',
+      texture: 'chewy',
+      flavor: ['melon', 'lime']
+    },
+    {
+      name: 'Jelly sticks',
+      taste: 'sweet',
+      type: 'fruit',
+      texture: 'soft',
+      flavor: ['raisin', 'mango', 'apple']
+    },
+    {
+      name: 'Baumkuchen',
+      taste: 'sweet',
+      type: 'candy',
+      texture: 'soft',
+      flavor: ['banana', 'chocolate', 'caramel']
+    },
+    {
+      name: 'Plantain chips',
+      taste: 'salty',
+      type: 'chips',
+      texture: 'crispy',
+      flavor: ['banana', 'spicy']
+    },
+    {
+      name: 'Hot&Spicy Almond',
+      taste: 'savory',
+      type: 'nuts',
+      texture: 'crunchy',
+      flavor: ['almond', 'spicy']
+    },
+    {
+      name: 'Boy Bawang',
+      taste: 'savory',
+      type: 'chips',
+      texture: 'crunchy',
+      flavor: ['garlic', 'spicy']
+    },
+    {
+      name: 'Croozers',
+      taste: 'salty',
+      type: 'nuts',
+      texture: 'crunchy',
+      flavor: ['caramel', 'peanut']
+    },
+    {
+      name: 'Luxus mix',
+      taste: 'salty',
+      type: 'nuts',
+      texture: 'crunchy',
+      flavor: ['almond', 'peanut', 'macadamia', 'chocolate']
+    },
+    {
+      name: 'Valencia almonds',
+      taste: 'salty',
+      type: 'nuts',
+      texture: 'crunchy',
+      flavor: 'almond'
+    },
+    {
+      name: 'Hot rice crackers',
+      taste: 'salty',
+      type: 'chips',
+      texture: 'chewy',
+      flavor: 'spicy'
+    },
+    {
+      name: 'Hot wasabi rice crackers',
+      taste: 'savory',
+      type: 'chips',
+      texture: 'chewy',
+      flavor: 'spicy'
     }
-
   ]
