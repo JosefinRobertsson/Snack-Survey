@@ -5,12 +5,13 @@ import { TypeTasteTextureContext } from './TypeTasteTextureProvider';
 import ProgressButton from './ProgressButton';
 import ProgressBar from './ProgressBar';
 
+
 const Taste = ({ data }) => {
     const { showProgressButton, setShowProgressButton } = React.useContext(ProgressContext);
     const { type, taste, setTaste } = React.useContext(TypeTasteTextureContext);
     const availableTastes = [...new Set(data.filter((snack) => snack.type === type).map((snack) => snack.taste))];
 
-    
+
     React.useEffect(() => {
         if (taste === '') {
             setShowProgressButton(false);
